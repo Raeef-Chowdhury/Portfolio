@@ -1,4 +1,8 @@
+"use client";
+import { useState } from "react";
+
 function Hero() {
+  const [hovered, setHovered] = useState(false);
   return (
     <div className="flex flex-col mx-auto max-w-[1440px] items-center justify-center text-center mt-[12rem] px-6">
       <div className="">
@@ -33,13 +37,39 @@ function Hero() {
           active users on one of them, Islamic Foundations.
         </p>
 
-        <div className="flex gap-[3.2rem] max-w-[644px] justify-self-center mt-[6.4rem]">
+        <div className="flex gap-[12rem] max-w-[644px] justify-self-center mt-[6.4rem]">
           <a
             href="https://github.com/raeef-chowdhury"
             target="_blank"
             rel="noopener noreferrer"
+            className="relative inline-block"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
           >
-            <button className="rounded-full p-[2rem] bg-slate-800 hover:bg-slate-700 transition-all hover:scale-105 hover:cursor-pointer">
+            <svg
+              className={`transition-all duration-500 rotate-[7.5deg] absolute top-[45%] -translate-y-1/2 left-1/2 -translate-x-[48%] w-full h-full  ${
+                hovered
+                  ? "opacity-100 transform translate-y-[-7.2rem]"
+                  : "opacity-0 translate-y-[10rem]"
+              } pointer-events-none`}
+              viewBox="0 0 200 200"
+            >
+              <defs>
+                <path
+                  id="circlePath"
+                  d="M 100, 100 m -80, 0 a 80,50 0 1,1 160,0 a 80,50 0 1,1 -160,0"
+                />
+              </defs>
+              <text
+                className="fill-tertiary text-[2.8rem] tracking-[0.6em]"
+                fill="currentColor"
+              >
+                <textPath href="#circlePath" startOffset="0%">
+                  GITHUB
+                </textPath>
+              </text>
+            </svg>
+            <button className="rounded-full p-[2rem] bg-slate-800 hover:bg-slate-700 transition-all hover:scale-105 hover:cursor-pointer relative z-10">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="48"
@@ -56,9 +86,34 @@ function Hero() {
                 <path d="M9 18c-4.51 2-5-2-7-2" />
               </svg>
             </button>
-          </a>{" "}
-          <a href="mailto:raeef.chowdhury23@gmail.com">
-            <button className="rounded-full p-[2rem] bg-slate-800 hover:bg-slate-700 transition-all hover:scale-105 hover:cursor-pointer">
+          </a>
+          <a
+            href="https://github.com/raeef-chowdhury"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block group"
+          >
+            <svg
+              className={`transition-all duration-500 rotate-[7.5deg] absolute top-[45%] -translate-y-1/2 left-1/2 -translate-x-[50%]  w-full h-full group-hover:opacity-100 opacity-0 group-hover:translate-y-[-7rem] translate-y-[10rem]  
+                pointer-events-none`}
+              viewBox="0 0 200 200"
+            >
+              <defs>
+                <path
+                  id="circlePath"
+                  d="M 100, 100 m -100, 0 a 100,35 0 1,1 200,0 a 100,35 0 1,1 -200,0"
+                />
+              </defs>
+              <text
+                className="fill-tertiary text-[3.2rem] tracking-[0.6em]"
+                fill="currentColor"
+              >
+                <textPath href="#circlePath" startOffset="0%">
+                  EMAIL
+                </textPath>
+              </text>
+            </svg>
+            <button className="rounded-full p-[2rem] bg-slate-800 hover:bg-slate-700 transition-all hover:scale-105 hover:cursor-pointer relative z-10">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="48"
