@@ -1,10 +1,32 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Hero() {
   const [hovered, setHovered] = useState(false);
+  const getCurrentTime = () => {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, "0");
+    const seconds = now.getSeconds().toString().padStart(2, "0");
+    const ampm = hours >= 12 ? "PM" : "AM";
+
+    hours = hours % 12;
+    hours = hours ? hours : 12; // 0 should be 12
+    const hoursStr = hours.toString().padStart(2, "0");
+
+    return `${hoursStr}:${minutes}:${seconds} ${ampm}`;
+  };
+  const [time, setTime] = useState(getCurrentTime());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(getCurrentTime());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
-    <div className="flex flex-col mx-auto max-w-[1440px] items-center justify-center text-center mt-[12rem] px-6">
+    <div className="flex flex-col mx-auto max-w-[1440px] items-center justify-center text-center mt-[9.6rem] px-6">
       <div className="">
         <p className="text-text text-[1.8rem] mb-[1.8rem]">
           Hey There!{" "}
@@ -12,20 +34,40 @@ function Hero() {
             👋
           </span>
         </p>
-
         <h1 className="text-[6.4rem]  font-bold text-slate-100 mb-6">
           I&apos;m{" "}
           <span className="text-primary  text-[6.4rem] tracking-[0.4rem]">
             Raeef Chowdhury
           </span>
         </h1>
+        <div className="flex justify-center mb-[3.6rem] mt-[2.4rem] items-center gap-3 text-tertiary transition-colors">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
 
+          <span className="text-[1.6rem] tracking-wide">Albury, Australia</span>
+
+          <span className="text-[1.6rem] tracking-wide opacity-80">
+            · {time}
+          </span>
+        </div>
         <p className="text-text text-[2.4rem] mb-8 max-w-[844px] leading-loose">
           A young developer with a love of the game having over{" "}
           <span className="underline underline-offset-2 hover:bg-primary hover:text-background transition-colors hover:cursor-pointer mr-[0.6rem] decoration-primary">
-            1,000+
+            2+
           </span>
-          hours of active coding expirience. So far, I have individually
+          years of active coding expirience. So far, I have individually
           published{" "}
           <span className="underline underline-offset-2 hover:bg-primary hover:text-background transition-colors hover:cursor-pointer mr-[0.6rem] decoration-primary">
             5+
@@ -36,8 +78,7 @@ function Hero() {
           </span>{" "}
           active users on one of them, Islamic Foundations.
         </p>
-
-        <div className="flex gap-[12rem] max-w-[644px] justify-self-center mt-[6.4rem]">
+        <div className="flex gap-[3.6rem] max-w-[644px] justify-self-center mt-[3.2rem]">
           <a
             href="https://github.com/raeef-chowdhury"
             target="_blank"
@@ -50,7 +91,7 @@ function Hero() {
               className={`transition-all duration-500 rotate-[7.5deg] absolute top-[45%] -translate-y-1/2 left-1/2 -translate-x-[48%] w-full h-full  ${
                 hovered
                   ? "opacity-100 transform translate-y-[-7.2rem]"
-                  : "opacity-0 translate-y-[10rem]"
+                  : "opacity-0 translate-y-[0rem]"
               } pointer-events-none`}
               viewBox="0 0 200 200"
             >
@@ -94,7 +135,7 @@ function Hero() {
             className="relative inline-block group"
           >
             <svg
-              className={`transition-all duration-500 rotate-[7.5deg] absolute top-[45%] -translate-y-1/2 left-1/2 -translate-x-[50%]  w-full h-full group-hover:opacity-100 opacity-0 group-hover:translate-y-[-7rem] translate-y-[10rem]  
+              className={`transition-all duration-500 rotate-[7.5deg] absolute top-[45%] -translate-y-1/2 left-1/2 -translate-x-[50%]  w-full h-full group-hover:opacity-100 opacity-0 group-hover:translate-y-[-7rem] translate-y-[0rem]  
                 pointer-events-none`}
               viewBox="0 0 200 200"
             >
@@ -131,6 +172,24 @@ function Hero() {
             </button>
           </a>
         </div>
+        <button className="group relative px-8 py-4 bg-secondary text-text rounded-full text-[1.8rem] tracking-wide hover:cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-800/50 mt-[3.2rem]">
+          CHECK OUT MY PROJECTS
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="absolute left-1/2 -translate-x-1/2 -bottom-24 animate-bounce text-tertiary"
+          >
+            <path d="M12 5v14" />
+            <path d="m19 12-7 7-7-7" />
+          </svg>
+        </button>
       </div>
     </div>
   );
