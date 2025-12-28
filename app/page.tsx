@@ -1,6 +1,6 @@
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-//TODO:CHECK OUT PROJECTS CTA BUTTON HERO?
+import Projects from "@/components/projects";
 //TODO: BRIEF TOOLS LINE
 //TODO: BACKGROUND SHAPES/SVGS?????
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
     <>
       <Header />
       <Hero />
+      <Projects />
     </>
   );
 }

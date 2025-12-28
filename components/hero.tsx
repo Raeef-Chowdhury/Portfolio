@@ -26,7 +26,7 @@ function Hero() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="flex flex-col mx-auto max-w-[1440px] items-center justify-center text-center mt-[9.6rem] px-6">
+    <div className="flex flex-col mx-auto max-w-[1440px] items-center justify-center text-center mt-[4.8rem] px-6">
       <div className="">
         <p className="text-text text-[1.8rem] mb-[1.8rem]">
           Hey There!{" "}
@@ -78,7 +78,7 @@ function Hero() {
           </span>{" "}
           active users on one of them, Islamic Foundations.
         </p>
-        <div className="flex gap-[3.6rem] max-w-[644px] justify-self-center mt-[3.2rem]">
+        <div className="flex gap-[3.6rem] max-w-[644px] justify-self-center mt-[4.8rem]">
           <a
             href="https://github.com/raeef-chowdhury"
             target="_blank"
@@ -172,7 +172,7 @@ function Hero() {
             </button>
           </a>
         </div>
-        <button className="group relative px-8 py-4 bg-secondary text-text rounded-full text-[1.8rem] tracking-wide hover:cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-800/50 mt-[3.2rem]">
+        <button className="group relative px-8 py-4 bg-secondary text-text rounded-full text-[1.8rem] tracking-wide hover:cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-800/50 mt-[6.4rem]">
           CHECK OUT MY PROJECTS
           <svg
             xmlns="http://www.w3.org/2000/svg"
