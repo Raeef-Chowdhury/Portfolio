@@ -3,14 +3,18 @@ import Heading from "@/components/heading";
 import Image from "next/image";
 import StarVaultImg from "../Images/ChatGPT Image Dec 29, 2025, 12_23_21 PM.png";
 import IslamicImg from "../Images/ChatGPT Image Dec 29, 2025, 06_26_05 PM.png";
-const techStack = [
+interface TechStack {
+  skill: string;
+  color: string;
+}
+const techStackStar: TechStack[] = [
   { skill: "JSON", color: "text-amber-300" },
   { skill: "Motion One", color: "text-blue-400" },
   { skill: "Vite", color: "text-purple-300" },
   { skill: "React JS", color: "text-cyan-200" },
   { skill: "React Three Fiber", color: "text-green-300" },
 ];
-const techStack1 = [
+const techStackIslam: TechStack[] = [
   { skill: "JSON", color: "text-amber-300" },
   { skill: "Motion One", color: "text-blue-400" },
   { skill: "Vite", color: "text-purple-300" },
@@ -50,7 +54,7 @@ function Projects() {
               galaxy represents an indiviudal category of personal expiriences.
             </p>
             <ul className="flex gap-[1.2rem] justify-center pb-[2.4rem]">
-              {techStack.map((item, index) => (
+              {techStackStar.map((item: TechStack, index: number) => (
                 <li
                   key={index}
                   className={`text-[1.6rem] bg-slate-800 px-[1.2rem] py-[0.6rem]  flex gap-[0.4rem] rounded-md items-center  ${item.color}`}
@@ -79,7 +83,7 @@ function Projects() {
               of the religion, with over 50+ active users.
             </p>
             <ul className="flex gap-[1.2rem] justify-center pb-[2.4rem]">
-              {techStack1.map((item, index) => (
+              {techStackIslam.map((item, index) => (
                 <li
                   key={index}
                   className={`text-[1.6rem] bg-slate-800 px-[1.2rem] py-[0.6rem]  flex gap-[0.4rem] rounded-md items-center  ${item.color}`}

@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 
 function Hero() {
-  const [hovered, setHovered] = useState(false);
-  const getCurrentTime = () => {
+  const [hovered, setHovered] = useState<boolean>(false);
+  const getCurrentTime = (): string => {
     const now = new Date();
     let hours = now.getHours();
     const minutes = now.getMinutes().toString().padStart(2, "0");
@@ -16,10 +16,10 @@ function Hero() {
 
     return `${hoursStr}:${minutes}:${seconds} ${ampm}`;
   };
-  const [time, setTime] = useState(getCurrentTime());
+  const [time, setTime] = useState<string>(getCurrentTime());
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const interval: NodeJS.Timeout = setInterval(() => {
       setTime(getCurrentTime());
     }, 1000);
 

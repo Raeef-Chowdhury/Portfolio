@@ -4,6 +4,8 @@ import Projects from "@/components/projects";
 //TODO: BRIEF TOOLS LINE
 //TODO: BACKGROUND SHAPES/SVGS?????
 //TODO:Project Card Blog post detailed overview on click
+//TODO: Branch Jason Cameron's Home section
+//TODO: Change frontend developer in header
 export default function Home() {
   return (
     <>
