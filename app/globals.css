@@ -29,10 +29,12 @@ body {
   background: var(--color-background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behaviour: smooth;
 }
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 @layer utilities {
   @keyframes wave {

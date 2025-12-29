@@ -172,24 +172,26 @@ function Hero() {
             </button>
           </a>
         </div>
-        <button className="group relative px-8 py-4 bg-secondary text-text rounded-full text-[1.8rem] tracking-wide hover:cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-800/50 mt-[6.4rem]">
-          CHECK OUT MY PROJECTS
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="absolute left-1/2 -translate-x-1/2 -bottom-24 animate-bounce text-tertiary"
-          >
-            <path d="M12 5v14" />
-            <path d="m19 12-7 7-7-7" />
-          </svg>
-        </button>
+        <a href="#projects">
+          <button className="group relative px-8 py-4 bg-secondary text-text rounded-full text-[1.8rem] tracking-wide hover:cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-800/50 mt-[6.4rem]">
+            CHECK OUT MY PROJECTS
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="absolute left-1/2 -translate-x-1/2 -bottom-24 animate-bounce text-tertiary"
+            >
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
+            </svg>
+          </button>
+        </a>
       </div>
     </div>
   );
