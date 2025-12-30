@@ -1,4 +1,3 @@
-import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Projects from "@/components/projects";
 //TODO: BRIEF TOOLS LINE
@@ -6,10 +5,10 @@ import Projects from "@/components/projects";
 //TODO:Project Card Blog post detailed overview on click
 //TODO: Branch Jason Cameron's Home section
 //TODO: Change frontend developer in header
+//TODO: BAck to projects btn on specific project blogpost
 export default function Home() {
   return (
     <>
-      <Header />
       <main className="pb-[8rem]">
         <Hero />
         <Projects />
