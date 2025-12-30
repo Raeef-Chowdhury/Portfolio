@@ -3,8 +3,8 @@ import Heading from "@/components/heading";
 import Link from "next/link";
 
 import Image from "next/image";
-import StarVaultImg from "../Images/ChatGPT Image Dec 29, 2025, 12_23_21 PM.png";
-import IslamicImg from "../Images/ChatGPT Image Dec 29, 2025, 06_26_05 PM.png";
+import StarVaultImg from "@/Images/Star-Vault.png";
+import IslamicImg from "@/Images/Islamic-Foundations.png";
 interface TechStack {
   skill: string;
   color: string;
@@ -39,14 +39,19 @@ function Projects() {
         </Link>
       </div>
 
-      <div className="Project__board mt-[6.4rem] flex justify-between gap-[12rem] items-center ">
+      <div className="Project__board mt-[6.4rem] flex justify-between gap-[6rem] items-center ">
         <Link href="/projects/starvault">
           <div className="border-slate-700 hover:border-slate-500 overflow-hidden hover:cursor-pointer hover:shadow-[0px_8px_20px_rgba(255,255,255,0.1)] hover:scale-[1.02] transition-all duration-300 border-4 max-w-[840px] rounded-2xl flex flex-col gap-[2.4rem]">
-            <div className="max-h-[388px] max-w-[622px] rounded w-full bg-emerald-900/40 p-6">
+            <div className="w-full h-[388px] rounded bg-emerald-900/40 p-6 flex items-center justify-center overflow-hidden">
               <Image
                 src={StarVaultImg}
-                className="w-[110%]  object-cover rounded-xl"
-                alt="Star Vault Project Image"
+                className="w-full h-full object-cover rounded-xl"
+                width={622}
+                height={388}
+                alt="Star Vault 3D galaxy journaling interface showing memories as stars in personalized galaxies"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 622px"
+                quality={90}
               />
             </div>
             <div className="text-[1.2rem] p-[1rem] ">
@@ -74,11 +79,16 @@ function Projects() {
         </Link>
         <Link href="/projects/islamicfoundations">
           <div className="border-slate-700 hover:border-slate-500 overflow-hidden hover:cursor-pointer hover:shadow-[0px_8px_20px_rgba(255,255,255,0.1)] hover:scale-[1.02] transition-all duration-300 border-4 max-w-[840px] rounded-2xl flex flex-col gap-[2.4rem]">
-            <div className="max-h-[388px] max-w-[622px] rounded w-full bg-emerald-900/40 p-6">
+            <div className="w-full h-[388px] rounded bg-emerald-900/40 p-6 flex items-center justify-center overflow-hidden">
               <Image
                 src={IslamicImg}
-                className="w-[110%]  object-cover rounded-xl"
-                alt="Star Vault Project Image"
+                className="w-full h-full object-cover rounded-xl"
+                width={622}
+                height={388}
+                alt="Islamic Foundations website interface for learning about Islam with over 50 active users"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 622px"
+                quality={90}
               />
             </div>
             <div className="text-[1.2rem] p-[1rem] ">

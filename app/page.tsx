@@ -6,6 +6,7 @@ import Projects from "@/components/projects";
 //TODO: Branch Jason Cameron's Home section
 //TODO: Change frontend developer in header
 //TODO: BAck to projects btn on specific project blogpost
+//TODO: MetaData Every Page
 export default function Home() {
   return (
     <>

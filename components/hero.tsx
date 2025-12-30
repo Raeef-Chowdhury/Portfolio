@@ -1,30 +1,6 @@
-"use client";
-import { useState, useEffect } from "react";
+import Time from "./time";
 
 function Hero() {
-  const [hovered, setHovered] = useState<boolean>(false);
-  const getCurrentTime = (): string => {
-    const now = new Date();
-    let hours = now.getHours();
-    const minutes = now.getMinutes().toString().padStart(2, "0");
-    const seconds = now.getSeconds().toString().padStart(2, "0");
-    const ampm = hours >= 12 ? "PM" : "AM";
-
-    hours = hours % 12;
-    hours = hours ? hours : 12; // 0 should be 12
-    const hoursStr = hours.toString().padStart(2, "0");
-
-    return `${hoursStr}:${minutes}:${seconds} ${ampm}`;
-  };
-  const [time, setTime] = useState<string>(getCurrentTime());
-
-  useEffect(() => {
-    const interval: NodeJS.Timeout = setInterval(() => {
-      setTime(getCurrentTime());
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
   return (
     <div className="flex flex-col mx-auto max-w-[1440px] items-center justify-center text-center mt-[4.8rem] px-6">
       <div className="">
@@ -59,7 +35,7 @@ function Hero() {
           <span className="text-[1.6rem] tracking-wide">Albury, Australia</span>
 
           <span className="text-[1.6rem] tracking-wide opacity-80">
-            · {time}
+            · <Time />
           </span>
         </div>
         <p className="text-text text-[2.4rem] mb-8 max-w-[844px] leading-loose">
@@ -83,16 +59,10 @@ function Hero() {
             href="https://github.com/raeef-chowdhury"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block"
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+            className="relative inline-block group"
           >
             <svg
-              className={`transition-all duration-500 rotate-[7.5deg] absolute top-[45%] -translate-y-1/2 left-1/2 -translate-x-[48%] w-full h-full  ${
-                hovered
-                  ? "opacity-100 transform translate-y-[-7.2rem]"
-                  : "opacity-0 translate-y-[0rem]"
-              } pointer-events-none`}
+              className="transition-all duration-500 rotate-[7.5deg] absolute top-[45%] -translate-y-1/2 left-1/2 -translate-x-[48%] w-full h-full opacity-0 translate-y-[0rem] group-hover:opacity-100 group-hover:translate-y-[-7.2rem] pointer-events-none"
               viewBox="0 0 200 200"
             >
               <defs>
@@ -129,7 +99,7 @@ function Hero() {
             </button>
           </a>
           <a
-            href="https://github.com/raeef-chowdhury"
+            href="mailto:raeefchowdhury23@gmail?subject=Portfolio%20Inquiry&body=Hi%20Raeef,%20I%20came%20across%20your%20portfolio..."
             target="_blank"
             rel="noopener noreferrer"
             className="relative inline-block group"

@@ -5,12 +5,14 @@ function Header() {
       <nav className="">
         <ul className="flex items-center justify-around">
           <div>
-            <li className="group flex items-center gap-3 hover:cursor-pointer hover:scale-125 text-slate-100 text-lg font-light transition-all duration-300 hover:translate-x-1">
-              <span className="flex items-center justify-center w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 group-hover:scale-150 transition-transform duration-300 shadow-lg shadow-cyan-500/50" />
-              <span className=" tracking-wide text-text text-[2.4rem]">
-                Frontend Developer
-              </span>
-            </li>
+            <Link href="https://github.com/raeef-chowdhury" target="_blank">
+              <li className="group flex items-center gap-3  hover:cursor-pointer hover:scale-110 text-slate-100 text-lg font-light transition-all duration-300 hover:translate-x-1">
+                <span className=" tracking-wide text-text text-[2.4rem] hover:text-tertiary transition-all duration-300">
+                  <span className="text-primary">{"<"}</span> Raeef Chowdhury{" "}
+                  <span className="text-primary">{"/>"}</span>
+                </span>
+              </li>
+            </Link>
           </div>
           <div className="flex items-center capitalize gap-[8rem]">
             <NavbarItem name="Home" route="/" />{" "}
