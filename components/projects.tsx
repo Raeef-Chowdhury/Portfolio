@@ -40,7 +40,7 @@ function Projects() {
       </div>
 
       <div className="Project__board mt-[6.4rem] flex justify-between gap-[6rem] items-center ">
-        <Link href="/projects/starvault">
+        <Link href="/projects/starvault ">
           <div className="border-slate-700 hover:border-slate-500 overflow-hidden hover:cursor-pointer hover:shadow-[0px_8px_20px_rgba(255,255,255,0.1)] hover:scale-[1.02] transition-all duration-300 border-4 max-w-[840px] rounded-2xl flex flex-col gap-[2.4rem]">
             <div className="w-full h-[388px] rounded bg-emerald-900/40 p-6 flex items-center justify-center overflow-hidden">
               <Image

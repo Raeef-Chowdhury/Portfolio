@@ -56,6 +56,7 @@ function Hero() {
         </p>
         <div className="flex gap-[3.6rem] max-w-[644px] justify-self-center mt-[4.8rem]">
           <a
+            aria-label="github link"
             href="https://github.com/raeef-chowdhury"
             target="_blank"
             rel="noopener noreferrer"
@@ -80,7 +81,10 @@ function Hero() {
                 </textPath>
               </text>
             </svg>
-            <button className="rounded-full p-[2rem] bg-slate-800 hover:bg-slate-700 transition-all hover:scale-105 hover:cursor-pointer relative z-10">
+            <button
+              aria-label="github link"
+              className="rounded-full p-[2rem] bg-slate-800 hover:bg-slate-700 transition-all hover:scale-105 hover:cursor-pointer relative z-10"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="48"
@@ -99,6 +103,7 @@ function Hero() {
             </button>
           </a>
           <a
+            aria-label="email address link"
             href="mailto:raeefchowdhury23@gmail?subject=Portfolio%20Inquiry&body=Hi%20Raeef,%20I%20came%20across%20your%20portfolio..."
             target="_blank"
             rel="noopener noreferrer"
@@ -124,7 +129,10 @@ function Hero() {
                 </textPath>
               </text>
             </svg>
-            <button className="rounded-full p-[2rem] bg-slate-800 hover:bg-slate-700 transition-all hover:scale-105 hover:cursor-pointer relative z-10">
+            <button
+              aria-label="email address link"
+              className="rounded-full p-[2rem] bg-slate-800 hover:bg-slate-700 transition-all hover:scale-105 hover:cursor-pointer relative z-10"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="48"
