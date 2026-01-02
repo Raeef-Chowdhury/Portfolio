@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 function BackButton({ link, page }: { link: string; page: string }) {
-  const [scrollY, setScrollY] = useState(() => {
+  const [scrollY, setScrollY] = useState<number>(() => {
     if (typeof window !== "undefined") {
       return window.scrollY;
     }

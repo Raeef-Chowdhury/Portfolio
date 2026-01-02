@@ -1,10 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import Heading from "@/components/heading";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-
 import Image from "next/image";
 import StarVaultImg from "@/Images/Star-Vault.png";
 import IslamicImg from "@/Images/Islamic-Foundations.png";
+
+const Heading = dynamic(() => import("@/components/heading"));
 interface TechStack {
   skill: string;
   color: string;
@@ -49,7 +50,7 @@ function Projects() {
                 width={622}
                 height={388}
                 alt="Star Vault 3D galaxy journaling interface showing memories as stars in personalized galaxies"
-                priority
+                loading="lazy"
                 sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 622px"
                 quality={90}
               />
@@ -86,7 +87,7 @@ function Projects() {
                 width={622}
                 height={388}
                 alt="Islamic Foundations website interface for learning about Islam with over 50 active users"
-                priority
+                loading="lazy"
                 sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 622px"
                 quality={90}
               />

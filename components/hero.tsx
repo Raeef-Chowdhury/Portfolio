@@ -1,4 +1,6 @@
-import Time from "./time";
+import dynamic from "next/dynamic";
+
+const Time = dynamic(() => import("@/components/time"));
 
 function Hero() {
   return (

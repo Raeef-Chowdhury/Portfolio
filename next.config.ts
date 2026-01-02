@@ -10,5 +10,10 @@ const nextConfig: NextConfig = {
     ],
   },
 };
-
+// next.config.js
+module.exports = {
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+};
 export default nextConfig;
