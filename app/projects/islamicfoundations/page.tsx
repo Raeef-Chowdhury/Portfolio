@@ -3,7 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedArticle from "@/components/animatedarticle";
 import BackButton from "@/components/BackButton";
-import { Github, ExternalLink, Calendar, Clock, Star } from "lucide-react";
+import IslamicPerformance from "@/Images/Screenshot 2026-01-04 143043.png";
+import {
+  Github,
+  ExternalLink,
+  Calendar,
+  Clock,
+  Star,
+  NotebookText,
+  Layers,
+  Zap,
+  Target,
+  Box,
+  NotebookPen,
+  Notebook,
+} from "lucide-react";
 
 function IslamicFoundations() {
   return (
@@ -72,27 +86,25 @@ function IslamicFoundations() {
           </div>
         </div>
         <div className="w-full flex flex-col items-center gap-[1.2rem] mt-[3rem]">
-          <h3 className="text-[4.8rem] text-text self-start tracking-[-0.1rem]">
-            Description
-          </h3>
-          <p className="text-text/80 text-[2rem] mb-8 max-w-[772px] self-start leading-loose">
+          <BlogHeading content="Description" />
+
+          <p className="text-text/80 text-[1.8rem] mb-8 max-w-[772px] self-start leading-loose">
             Islamic Foundations is a real world website made for Muslims to
             deepen their faith. It is a platform that allows muslims to complete
             prayer streaks, read the Quran (Holy Book), among other daily
             essentials for all muslims.
           </p>
 
-          <p className="text-text/80 text-[2rem] max-w-[772px] self-start leading-loose">
+          <p className="text-text/80 text-[1.8rem] max-w-[772px] self-start leading-loose">
             This is my most impressive project yet because it caters to an
             actual target market of people who will benefit from what I have
             made.
           </p>
         </div>{" "}
         <div className="w-full flex flex-col items-center gap-[1.2rem] mt-[6rem]">
-          <h3 className="text-[4.8rem] text-text self-start tracking-[-0.1rem]">
-            Tech Stack
-          </h3>
-          <ul className="text-text/80 ml-[4.8rem] list-disc text-[2rem] mb-8 max-w-[772px] self-start leading-loose">
+          <BlogHeading content="Tech Stack" />
+
+          <ul className="text-text/80 ml-[4.8rem] list-disc text-[1.8rem] mb-8 max-w-[772px] self-start leading-loose">
             <li>
               <span className="text-text">React JS:</span> Core library used to
               build the structure and logic of the website
@@ -120,10 +132,9 @@ function IslamicFoundations() {
           </ul>
         </div>
         <div className="w-full flex flex-col items-center gap-[1.2rem] mt-[6rem]">
-          <h3 className="text-[4.8rem] text-text self-start tracking-[-0.1rem]">
-            Features
-          </h3>
-          <ul className="text-text/80 ml-[4.8rem] list-disc text-[2rem] mb-8 max-w-[772px] self-start leading-loose">
+          <BlogHeading content="Features" />
+
+          <ul className="text-text/80 ml-[4.8rem] list-disc text-[1.8rem] mb-8 max-w-[772px] self-start leading-loose">
             <li>
               <span className="text-text">Filtering:</span> Create filtering by
               name or category for both surahs (chapters) and duas (prayers).
@@ -144,13 +155,157 @@ function IslamicFoundations() {
               <span className="text-text">Dark Mode:</span> Because why not?
               Definitely not worth it though.
             </li>
-          </ul>{" "}
+          </ul>
+        </div>
+        <div className="w-full flex flex-col items-center gap-[1.2rem]  mt-[6rem]">
+          <BlogHeading content="Challenges & Solutions" />
+
+          <table className="max-w-[772px] text-[1.8rem] mt-[2.4rem] mb-8 self-start">
+            <thead>
+              <tr className="border-b-2 border-text/10">
+                <th className="text-left py-4 px-4  text-red-400">
+                  Challenges
+                </th>
+                <th className="text-left py-4 px-4 text-emerald-400">
+                  Solutions
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-green-100 leading-loose">
+              <tr className="border border-text/10">
+                <td className="py-4 border-r border-text/10 px-4 text-red-50">
+                  Render thousands of lines of Arabic{" "}
+                </td>
+                <td className="py-4 px-4">
+                  Used APIs to fetch all the data needed for the Quran,Prayers,
+                  and Duas dynamically
+                </td>
+              </tr>
+              <tr className="border border-text/10">
+                <td className="py-4 border-r border-text/10 px-4 text-red-50">
+                  Geolocation-Based Prayer Times
+                </td>
+                <td className="py-4 px-4">
+                  Calculating accurate Salah times across different time zones
+                  and locations using geolocation API and a function to
+                  determine time difference
+                </td>
+              </tr>
+              <tr className="border border-text/10">
+                <td className="py-4 border-r border-text/10 px-4 text-red-50">
+                  Responsive Design{" "}
+                </td>
+                <td className="py-4 px-4">
+                  Optimize the UI and UX expirience across multiple screen
+                  sizes.
+                </td>
+              </tr>
+              <tr className="border border-text/10">
+                <td className="py-4 border-r border-text/10 px-4 text-red-50">
+                  Audio Player for each verse
+                </td>
+                <td className="py-4 px-4">
+                  Synchronizing Quran recitation audio with highlighted Arabic
+                  text and using audio methods
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>{" "}
+        <div className="w-full flex flex-col items-center gap-[1.2rem] mt-[6rem]">
+          <BlogHeading content="Performance" />
+          <table className="max-w-[772px] text-[1.8rem] mt-[2.4rem] mb-8 self-start">
+            <thead>
+              <tr className="border-b-2 border-text/10">
+                <th className="text-left py-4 px-4  text-emerald-200">
+                  Scores
+                </th>
+                <th className="text-left py-4 px-4 text-slate-300">
+                  What I did
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-green-100 leading-loose">
+              <tr className="border border-text/10">
+                <td className="py-4 border-r border-text/10 px-4 text-text">
+                  Performance: <span className="text-green-200">100</span>
+                </td>
+                <td className="py-4 px-4">
+                  Split code into multiple components, use lazy loading and
+                  react hooks.
+                </td>
+              </tr>
+              <tr className="border border-text/10">
+                <td className="py-4 border-r border-text/10 px-4 text-text">
+                  Accessibility: <span className="text-green-200">98</span>
+                </td>
+                <td className="py-4 px-4">
+                  Include semantic HTML elements properly and give aria labels
+                  to important elements
+                </td>
+              </tr>
+              <tr className="border border-text/10">
+                <td className="py-4 border-r border-text/10 px-4 text-text">
+                  Best Practices: <span className="text-green-200">100</span>
+                </td>
+                <td className="py-4 px-4">
+                  Use the correct HTML tags for each element, optimize images,
+                  and made website responsive
+                </td>
+              </tr>
+              <tr className="border border-text/10">
+                <td className="py-4 border-r border-text/10 px-4 text-text">
+                  SEO: <span className="text-text/80">91</span>
+                </td>
+                <td className="py-4 px-4">
+                  Use proper HTML elements and include alt labels for images
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <Image src={IslamicPerformance} alt="Islamic Foundations" />
+        </div>
+        <div className="w-full flex flex-col items-center gap-[1.2rem] mt-[6rem]">
+          <BlogHeading content="What I Learned" />{" "}
+          <p className="text-text/80 text-[1.8rem] mb-8 max-w-[772px] self-start leading-loose">
+            By creating this site, I learned the proper workflow of developing a
+            useable app, and in the process learnt about React Hooks, API
+            handling in ReactJS, performance and accesbility optimizations, and
+            core problem solving to debug issues.
+          </p>
         </div>
       </AnimatedArticle>
     </>
   );
 }
 export default IslamicFoundations;
+
+function BlogHeading({ content }: { content: string }) {
+  return (
+    <>
+      <div className="flex gap-[0.8rem] items-center text-left   self-start justify-start ">
+        {content === "Description" ? (
+          <NotebookText size={36} className="text-emerald-800" />
+        ) : content === "Tech Stack" ? (
+          <Layers size={36} className="text-emerald-800" />
+        ) : content === "Performance" ? (
+          <Zap size={36} className="text-emerald-800" />
+        ) : content === "Challenges & Solutions" ? (
+          <Target size={36} className="text-emerald-800" />
+        ) : content === "Features" ? (
+          <Box size={36} className="text-emerald-800" />
+        ) : content === "What I Learned" ? (
+          <NotebookPen size={36} className="text-emerald-800" />
+        ) : (
+          <Layers size={36} className="text-emerald-800" />
+        )}
+        <h3 className="text-[4.8rem] text-text self-start tracking-[-0.1rem]">
+          {content}
+        </h3>
+      </div>
+    </>
+  );
+}
 
 export const metadata = {
   title: "Islamic Foundations | Projects",

@@ -107,6 +107,11 @@ interface GitHubUser {
 }
 
 async function Activity() {
+  const headers: HeadersInit = {};
+
+  if (process.env.GITHUB_TOKEN) {
+    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+  }
   const res = await fetch(
     "https://api.github.com/users/raeef-chowdhury/events/public"
   );
@@ -153,39 +158,40 @@ async function Activity() {
           />
         </div>
 
-        <div className="mt-[9rem] w-full max-w-[588px]">
+        <div className="mt-[9rem] w-full max-w-[1920px]">
           <h3 className="text-[2.4rem] font-semibold text-text mb-[2.4rem]">
             Latest Commits
           </h3>
-          <div className="flex flex-col gap-[2rem]">
+          <div className="grid grid-cols-3  gap-[4.2rem]">
             {commitDetails.map((commit: Commit, index: number) => (
               <a
                 key={index}
                 href={commit.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group border border-slate-700/60 hover:border-emerald-600 bg-slate-900/40 hover:bg-slate-900/60 rounded-xl p-[2.4rem] transition-all duration-200"
+                className="group border max-w-[424px]  border-slate-700/70 border-2 hover:border-emerald-600 bg-slate-900/40 hover:bg-slate-900/60 rounded-xl p-[2.4rem] transition-all duration-200"
               >
                 <div className="flex flex-col gap-[2rem]">
                   <div className="flex flex-col items-center text-center gap-[1.2rem]">
                     <div className="flex items-center gap-[1rem]">
-                      <span className="text-[1.6rem] text-emerald-500 font-medium">
+                      <span className="text-[1.8rem] text-emerald-500 font-medium">
                         {commitRepos[index]}
                       </span>
-                      <span className="text-slate-200">·</span>
-                      <span className="text-[1.4rem] text-slate-400">
-                        {new Date(
-                          commit.commit.author.date
-                        ).toLocaleDateString()}
-                      </span>
                     </div>
-                    <p className="text-[1.8rem] text-text leading-relaxed group-hover:text-white transition-colors">
-                      {commit.commit.message}
+                    <p
+                      className={` ${
+                        commit.commit.message.length > 55
+                          ? ""
+                          : "mt-[0.8rem] mb-[0.8rem]"
+                      } max-w-[324px]  text-[1.6rem] text-text leading-relaxed group-hover:text-white transition-colors`}
+                    >
+                      {commit.commit.message}{" "}
+                      {commit.commit.message.length > 70 && "..."}
                     </p>
                   </div>
 
                   <div className="flex items-center justify-center gap-[2.4rem] text-[1.4rem] pt-[1.6rem] border-t border-slate-700/50">
-                    <span className="font-mono text-emerald-600/90">
+                    <span className="font-mono text-slate-400">
                       {commit.sha.substring(0, 7)}
                     </span>
 
