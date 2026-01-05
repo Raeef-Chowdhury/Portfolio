@@ -15,14 +15,14 @@ export const starVaultData = {
   metadata: {
     date: "December 2025",
     duration: "3 Weeks",
-    highlight: "3D Interactivity",
+    users: "3D Interactivity",
   },
 
   images: {
     hero: StarVaultImg,
     heroAlt:
       "Star Vault 3D galaxy journaling interface showing memories as stars in personalized galaxies",
-    perforamnceImg: StarVaultPerformance,
+    performance: StarVaultPerformance,
     performanceAlt: "Star Vault performance image",
   },
 

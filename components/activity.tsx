@@ -160,7 +160,7 @@ async function Activity() {
 
         <div className="mt-[9rem] w-full max-w-[1920px]">
           <h3 className="text-[2.4rem] font-semibold text-text mb-[2.4rem]">
-            Latest Commits
+            Recent Work{" "}
           </h3>
           <div className="grid grid-cols-3  gap-[4.2rem]">
             {commitDetails.map((commit: Commit, index: number) => (
