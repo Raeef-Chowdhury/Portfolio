@@ -1,15 +1,48 @@
 // app/projects/[slug]/page.jsx
 import { notFound } from "next/navigation";
-import AnimatedArticle from "@/components/animatedarticle";
-import BackButton from "@/components/BackButton";
-import BlogMain from "@/components/blogmain";
-import BlogStats from "@/components/blogstats";
-import BlogDesp from "@/components/blogdesp";
-import BlogTech from "@/components/blogtech";
-import BlogFeatures from "@/components/blogfeatures";
-import BlogChallenges from "@/components/blogchallenges";
-import BlogPerformance from "@/components/blogperformance";
-import BlogLearning from "@/components/BlogLearning";
+import dynamic from "next/dynamic";
+const AnimatedArticle = dynamic(() => import("@/components/animatedarticle"), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded"></div>,
+});
+
+const BackButton = dynamic(() => import("@/components/BackButton"), {
+  loading: () => (
+    <div className="h-10 w-24 bg-gray-200 rounded animate-pulse"></div>
+  ),
+});
+
+const BlogMain = dynamic(() => import("@/components/blogmain"), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-96 rounded"></div>,
+});
+
+const BlogStats = dynamic(() => import("@/components/blogstats"), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded"></div>,
+});
+
+const BlogDesp = dynamic(() => import("@/components/blogdesp"), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded"></div>,
+});
+
+const BlogTech = dynamic(() => import("@/components/blogtech"), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-40 rounded"></div>,
+});
+
+const BlogFeatures = dynamic(() => import("@/components/blogfeatures"), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded"></div>,
+});
+
+const BlogChallenges = dynamic(() => import("@/components/blogchallenges"), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-56 rounded"></div>,
+});
+
+const BlogPerformance = dynamic(() => import("@/components/blogperformance"), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded"></div>,
+});
+
+const BlogLearning = dynamic(() => import("@/components/BlogLearning"), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-52 rounded"></div>,
+});
+
 import {
   projectsData,
   projectMetadata,
