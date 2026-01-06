@@ -187,7 +187,7 @@ function Skills() {
                           className={`absolute -inset-0.5 rounded-2xl bg-gradient-to-r ${
                             skill.colorGradient
                           } opacity-0 blur-lg transition-all duration-500 ${
-                            isHovered ? "opacity-10" : ""
+                            isHovered ? "opacity-20 " : ""
                           }`}
                         ></div>
 

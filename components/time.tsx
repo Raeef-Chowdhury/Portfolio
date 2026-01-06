@@ -16,14 +16,16 @@ function Time() {
     return `${hoursStr}:${minutes}:${seconds} ${ampm}`;
   };
   const [time, setTime] = useState<string>(getCurrentTime());
+  const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
     const interval: NodeJS.Timeout = setInterval(() => {
       setTime(getCurrentTime());
+      setMounted(true);
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
-  return <>{time}</>;
+  return <>{mounted && time}</>;
 }
 export default Time;
