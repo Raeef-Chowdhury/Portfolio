@@ -1,8 +1,5 @@
 import BlogHeading from "./blogheading";
-interface TechStack {
-  name: string;
-  description: string;
-}
+import { TechStack } from "@/Types/techstack";
 function BlogTech({ techstack }: { techstack: TechStack[] }) {
   {
     return (
@@ -12,7 +9,7 @@ function BlogTech({ techstack }: { techstack: TechStack[] }) {
         <ul className="text-text/80 ml-[4.8rem] list-disc text-[1.8rem] mb-8 max-w-[772px] self-start leading-loose">
           {techstack.map((item, i) => (
             <li key={i}>
-              <span className="text-text">{item.name}:</span> {item.description}
+              <span className="text-text">{item.skill}:</span> {item.color}
             </li>
           ))}
         </ul>

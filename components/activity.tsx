@@ -117,7 +117,7 @@ async function Activity() {
       "https://api.github.com/users/raeef-chowdhury/events",
       {
         headers,
-        next: { revalidate: 3600 }, // Cache for 1 hour
+        next: { revalidate: 0 },
       }
     );
 
@@ -143,7 +143,6 @@ async function Activity() {
         { headers }
       ).then((res) => res.json() as Promise<Commit>)
     );
-
     // Wait for all requests to complete
     const commitDetails = await Promise.all(commitDetailsPromises);
 
