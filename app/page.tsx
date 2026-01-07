@@ -4,6 +4,7 @@ const Hero = dynamic(() => import("@/components/hero"));
 const Projects = dynamic(() => import("@/components/projects"));
 const Activity = dynamic(() => import("@/components/activity"));
 const Skills = dynamic(() => import("@/components/skills"));
+import About from "@/components/about";
 //TODO: Branch Jason Cameron's Home section
 //TODO: Techstack top of blogpost
 //TODO: TODO IN BLOGPOST
@@ -19,6 +20,7 @@ export default function Home() {
         <Projects />
         <Activity />
         <Skills />
+        <About />
       </main>
     </>
   );

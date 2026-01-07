@@ -1,17 +1,6 @@
 import Heading from "./heading";
 import SkillCard from "./skillcard";
-
-// Placeholder Heading component - replace with your actual Heading component
-
-interface Skill {
-  name: string;
-  icon: string;
-  colorGradient: string;
-  color: string;
-  yearsExp: number;
-  projectsBuilt: number;
-  category: string;
-}
+import { Skill } from "@/Types/skill";
 
 // Category Icons
 const categoryIcons = {

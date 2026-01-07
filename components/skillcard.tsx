@@ -13,17 +13,9 @@ import {
   SiGooglechrome,
 } from "react-icons/si";
 import React from "react";
+import { Skill } from "@/Types/skill";
 import { useState } from "react";
 import { IconType } from "react-icons";
-interface Skill {
-  name: string;
-  icon: string;
-  colorGradient: string;
-  color: string;
-  yearsExp: number;
-  projectsBuilt: number;
-  category: string;
-}
 const iconMap: Record<string, IconType> = {
   SiHtml5,
   SiCss3,
