@@ -50,7 +50,7 @@ export default function AboutPreview() {
               websites that solve real problems. What began as a experiment has
               now become a full fledged{" "}
               <span className="text-emerald-400 font-semibold">obsession</span>{" "}
-              with web development. .
+              with web development.
             </p>
           </div>
         </div>

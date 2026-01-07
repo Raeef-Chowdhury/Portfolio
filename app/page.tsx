@@ -18,9 +18,9 @@ export default function Home() {
       <main className="pb-[8rem]">
         <Hero />
         <Projects />
-        <Activity />
-        <Skills />
         <About />
+        <Skills />
+        <Activity />
       </main>
     </>
   );
