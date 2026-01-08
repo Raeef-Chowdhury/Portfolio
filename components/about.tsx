@@ -5,7 +5,7 @@ interface Value {
   label: string;
   description: string;
 }
-export const values = [
+export const values: Value[] = [
   {
     icon: Layers,
     label: "Systems Thinker",

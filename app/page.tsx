@@ -9,9 +9,11 @@ import About from "@/components/about";
 //TODO: Techstack top of blogpost
 //TODO: TODO IN BLOGPOST
 //TODO: VIDEOS BLOGPOST & NAVIGATION
-//TODO: Techstack Section Hero
 //TODO:FOOTER
-///TODO: ABout preview in homepage
+//TODO: STaggered aniamtions projects/skills section
+//TODO: About me simple page first viewport then timeline after that
+//TODO: Either techstack section move to page then create coloumns for section, or techstack project used details or smth like that
+//TODO: Parallax sparinghly maybe like hero or something very optional
 export default function Home() {
   return (
     <>

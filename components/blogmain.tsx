@@ -34,6 +34,7 @@ function BlogMain({
         </h1>
         <div className="flex items-center gap-[4.5rem] mr-[2rem]">
           <Link
+            aria-label="github link"
             href={github}
             target="_blank"
             className="bg-emerald-900/70 hover:transition-all duration-200 hover:scale-110 hover:cursor-pointer p-[1rem] rounded-full"
@@ -41,6 +42,7 @@ function BlogMain({
             <Github size={30} className="text-amber-600" strokeWidth={2} />
           </Link>
           <Link
+            aria-label="open project demo linkP"
             href={demo}
             target="_blank"
             className="bg-emerald-900/70 hover:transition-all duration-200 hover:scale-110 hover:cursor-pointer p-[1rem] rounded-full"

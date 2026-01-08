@@ -119,7 +119,7 @@ function Skills() {
   const categories = Array.from(new Set(skills.map((s) => s.category)));
 
   return (
-    <div className="min-h-screen mt-[24rem] py-24 px-6 lg:px-12 2xl:px-20">
+    <div className="min-h-screen mt-[12rem] py-24 px-6 lg:px-12 2xl:px-20">
       <div className="w-full max-w-[1800px] mx-auto">
         <div className="mb-20">
           <Heading content="Tech Stack" />
@@ -136,7 +136,7 @@ function Skills() {
                   {category}
                 </h2>
                 <div className="flex-1 h-[2px] bg-gradient-to-r from-gray-700 via-gray-600 to-transparent ml-4"></div>
-                <div className="text-gray-500 text-sm font-medium">
+                <div className="text-gray-200 text-[1rem] font-medium">
                   {skills.filter((s) => s.category === category).length} skills
                 </div>
               </div>
