@@ -1,159 +1,136 @@
-import Heading from "./heading";
-import SkillCard from "./skillcard";
-import { Skill } from "@/Types/skill";
-
-// Category Icons
-const categoryIcons = {
-  Frontend: "⚡",
-  Tools: "🛠️",
-  Backend: "⚙️",
-};
-
-function Skills() {
-  const skills: Skill[] = [
-    // Frontend
-    {
-      name: "HTML",
-      icon: "SiHtml5",
-      colorGradient: "from-red-500 to-red-600",
-      color: "red-500",
-      yearsExp: 3,
-      projectsBuilt: 25,
-      category: "Frontend",
-    },
-    {
-      name: "CSS",
-      icon: "SiCss3",
-      colorGradient: "from-blue-700 to-blue-800",
-      color: "blue-700",
-      yearsExp: 3,
-      projectsBuilt: 25,
-      category: "Frontend",
-    },
-    {
-      name: "JavaScript",
-      icon: "SiJavascript",
-      colorGradient: "from-yellow-400 to-yellow-600",
-      color: "yellow-400",
-      yearsExp: 3,
-      projectsBuilt: 20,
-      category: "Frontend",
-    },
-    {
-      name: "React",
-      icon: "SiReact",
-      colorGradient: "from-cyan-400 to-blue-500",
-      color: "cyan-400",
-      yearsExp: 2,
-      projectsBuilt: 11,
-      category: "Frontend",
-    },
-    {
-      name: "Next.js",
-      icon: "SiNextdotjs",
-      colorGradient: "from-slate-200 to to-slate-300",
-      color: "slate-300",
-      yearsExp: 1,
-      projectsBuilt: 3,
-      category: "Frontend",
-    },
-    {
-      name: "TypeScript",
-      icon: "SiTypescript",
-      colorGradient: "from-blue-500 to-blue-700",
-      color: "blue-500",
-      yearsExp: 1,
-      projectsBuilt: 3,
-      category: "Frontend",
-    },
-    {
-      name: "Tailwind",
-      icon: "SiTailwindcss",
-      colorGradient: "from-teal-400 to-cyan-500",
-      color: "teal-500",
-      yearsExp: 2,
-      projectsBuilt: 9,
-      category: "Frontend",
-    },
-    {
-      name: "SASS",
-      icon: "SiSass",
-      colorGradient: "from-pink-500 to-purple-600",
-      color: "pink-500",
-      yearsExp: 1,
-      projectsBuilt: 4,
-      category: "Frontend",
-    },
-
-    // Tools
-    {
-      name: "Git",
-      icon: "SiGit",
-      colorGradient: "from-orange-500 to-red-600",
-      color: "orange-500",
-      yearsExp: 2,
-      projectsBuilt: 16,
-      category: "Tools",
-    },
-
-    {
-      name: "npm",
-      icon: "SiNpm",
-      colorGradient: "from-red-500 to-red-700",
-      color: "red-800",
-      yearsExp: 2,
-      projectsBuilt: 10,
-      category: "Tools",
-    },
-    {
-      name: "Chrome DevTools",
-      icon: "SiGooglechrome",
-      colorGradient: "from-green-400 to-blue-500",
-      color: "emerald-700",
-      yearsExp: 3,
-      projectsBuilt: 20,
-      category: "Tools",
-    },
-  ];
-
-  const categories = Array.from(new Set(skills.map((s) => s.category)));
-
+import Heading from "@/components/heading";
+import Link from "next/link";
+import {
+  SiReact,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+} from "react-icons/si";
+const techs = [
+  {
+    name: "React",
+    color: "text-cyan-400",
+    borderColor: "border-cyan-500/40",
+    bgColor: "bg-cyan-500/5",
+    hoverBorder: "hover:border-cyan-400/60",
+    hoverBg: "hover:bg-cyan-500/10",
+    shadow: "hover:shadow-cyan-500/20",
+    icon: SiReact,
+  },
+  {
+    name: "TypeScript",
+    color: "text-blue-400",
+    borderColor: "border-blue-500/40",
+    bgColor: "bg-blue-500/5",
+    hoverBorder: "hover:border-blue-400/60",
+    hoverBg: "hover:bg-blue-500/10",
+    shadow: "hover:shadow-blue-500/20",
+    icon: SiTypescript,
+  },
+  {
+    name: "Next.js",
+    color: "text-slate-300",
+    borderColor: "border-slate-500/40",
+    bgColor: "bg-slate-500/5",
+    hoverBorder: "hover:border-slate-400/60",
+    hoverBg: "hover:bg-slate-500/10",
+    shadow: "hover:shadow-slate-400/20",
+    icon: SiNextdotjs,
+  },
+  {
+    name: "Tailwind",
+    color: "text-sky-400",
+    borderColor: "border-sky-500/40",
+    bgColor: "bg-sky-500/5",
+    hoverBorder: "hover:border-sky-400/60",
+    hoverBg: "hover:bg-sky-500/10",
+    shadow: "hover:shadow-sky-400/20",
+    icon: SiTailwindcss,
+  },
+];
+export default function TechStack() {
   return (
-    <div className="min-h-screen mt-[12rem] py-24 px-6 lg:px-12 2xl:px-20">
-      <div className="w-full max-w-[1800px] mx-auto">
-        <div className="mb-20">
-          <Heading content="Tech Stack" />
-        </div>
+    <section className="w-full flex flex-col items-center  max-w-7xl mx-auto mt-32 px-6">
+      {/* Section Heading */}
+      <Heading content="Stack" />
 
-        <div className="space-y-24">
-          {categories.map((category) => (
-            <div key={category}>
-              <div className="flex items-center gap-4 mb-12">
-                <div className="text-5xl">
-                  {categoryIcons[category as keyof typeof categoryIcons]}
-                </div>
-                <h2 className="text-5xl font-bold text-white uppercase tracking-tight">
-                  {category}
-                </h2>
-                <div className="flex-1 h-[2px] bg-gradient-to-r from-gray-700 via-gray-600 to-transparent ml-4"></div>
-                <div className="text-gray-200 text-[1rem] font-medium">
-                  {skills.filter((s) => s.category === category).length} skills
-                </div>
-              </div>
+      <div className="relative w-full border border-slate-700/50 rounded-3xl p-12 bg-slate-900/50 backdrop-blur-sm mt-12">
+        <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-cyan-500/5 to-transparent rounded-tl-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-sky-500/5 to-transparent rounded-br-3xl pointer-events-none" />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
-                {skills
-                  .filter((skill) => skill.category === category)
-                  .map((skill) => (
-                    <SkillCard key={skill.name} skill={skill} />
-                  ))}
-              </div>
-            </div>
-          ))}
+        <div
+          className="absolute inset-0 opacity-[0.02] rounded-3xl pointer-events-none"
+          style={{
+            backgroundImage: `linear-gradient(rgba(148, 163, 184, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.5) 1px, transparent 1px)`,
+            backgroundSize: "32px 32px",
+          }}
+        />
+
+        {/* Content - Left aligned */}
+        <div className="relative space-y-8">
+          {/* Message */}
+          <p className="text-text text-[2.8rem] font-semibold self-center justify-self-center mb-[3.2rem] leading-tight">
+            I build{" "}
+            <span className="text-emerald-600 bg-black rounded-md">fast</span>,{" "}
+            <span className="text-emerald-600 bg-black rounded-md">
+              accessible
+            </span>{" "}
+            web apps with{" "}
+            <span className="text-emerald-600 bg-black rounded-md">modern</span>{" "}
+            tools
+          </p>
+
+          {/* Tech Pills */}
+          <div className="flex flex-wrap gap-12">
+            {techs.map((tech) => (
+              <span
+                key={tech.name}
+                className={` text-[1.8rem]
+                  group
+                  inline-flex items-center gap-4
+                  px-9 py-3 
+                  ${tech.color}
+                  ${tech.bgColor}
+                  border-2 ${tech.borderColor}
+                  rounded-full
+                  font-semibold text-base
+                  ${tech.hoverBorder}
+                  ${tech.hoverBg}
+                  hover:shadow-lg ${tech.shadow}
+                  hover:scale-105
+                  transition-all duration-300
+                  cursor-default
+                `}
+              >
+                <tech.icon className="w-9 h-9" /> {tech.name}
+              </span>
+            ))}
+          </div>
+
+          {/* CTA Link */}
+          <div className="flex justify-center w-full">
+            <Link
+              href="/skills"
+              className="
+      inline-flex text-[1.8rem] mt-[1.8rem] items-center gap-2
+      text-base font-medium
+      text-emerald-400
+      transition-colors duration-200
+      group
+      pt-2
+    "
+            >
+              <span className="relative">
+                View the what, how and why
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-400 to-cyan-400 group-hover:w-full transition-all duration-300" />
+              </span>
+              <span className="group-hover:translate-x-1 transition-transform duration-200">
+                →
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
-
-export default Skills;

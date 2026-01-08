@@ -8,7 +8,7 @@ const navbarItems: NavbarItemProps[] = [
   { content: "Home", route: "/" },
   { content: "About", route: "/about" },
   { content: "Projects", route: "/projects" },
-  { content: "Blog", route: "/blog" },
+  { content: "Skills", route: "/skills" },
   { content: "Contact", route: "/contact" },
 ];
 function Header() {
