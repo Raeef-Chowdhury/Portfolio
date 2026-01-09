@@ -1,7 +1,8 @@
 import StarVaultImg from "@/Images/Star-Vault.png";
 import StarVaultPerformance from "@/Images/Star-Performance.png";
+import { ProjectData } from "@/Types/projectDetailed";
 
-export const starVaultData = {
+export const starVaultData: ProjectData = {
   id: "star-vault",
   title: "Star Vault",
   category: "3D Web Development",
@@ -137,11 +138,6 @@ export const starVaultData = {
 
   lessonsLearned:
     "Building Star Vault pushed me beyond traditional 2D web development into the realm of 3D interactive experiences. I gained deep knowledge of React Three Fiber, Three.js fundamentals, complex mathematical positioning systems, and the challenges of maintaining performance in browser-based 3D environments. Most importantly, I learned to balance technical complexity with user experience, recognizing that innovative technology must still be accessible and intuitive for users.",
-
-  improvements: [
-    "First Time User Experience: Add comprehensive onboarding flow and interactive tutorial to guide new users through the 3D interface",
-    "Search/Filter Enhancement: Implement robust search functionality with filtering by date, tags, or keywords to quickly locate specific memories",
-  ],
 };
 
 export default starVaultData;

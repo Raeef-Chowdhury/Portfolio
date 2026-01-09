@@ -8,7 +8,7 @@ function NavbarItem({ name, route }: { name: string; route: string }) {
   return (
     <li
       className={`text-[1.6rem] transition-all hover:scale-110 hover:cursor-pointer tracking-[0.2rem] ${
-        currentPath === route
+        (route === "/" ? currentPath === route : currentPath.includes(route))
           ? "text-emerald-900 font-bold bg-primary px-12 py-3 rounded-full shadow-lg shadow-primary/30"
           : "text-text hover:text-primary underline underline-offset-12 decoration-wavy"
       }`}

@@ -1,10 +1,12 @@
 // Data/projects-registry.ts
 import IslamicData from "./islamic-blog";
 import StarData from "./star-blog";
+import PortfolioData from "./portfolio";
 
 export const projectsData = {
   "islamic-foundations": IslamicData,
   "star-vault": StarData,
+  portfolio: PortfolioData,
   // Add more projects here as you create them
 } as const;
 

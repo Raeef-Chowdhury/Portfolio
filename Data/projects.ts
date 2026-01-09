@@ -3,6 +3,7 @@ import { Project } from "@/Types/project";
 
 import StarVaultImg from "@/Images/Star-Vault.png";
 import IslamicImg from "@/Images/Islamic-Foundations.png";
+import PortfolioImg from "@/Images/Portfolio.png";
 
 const techStackStar: TechStack[] = [
   { skill: "JSON", color: "text-yellow-400" },
@@ -37,6 +38,17 @@ export const projects: Project[] = [
       "A real world app meant for muslims to practice their daily obligations, currently used by over 50 people.",
     image: IslamicImg,
     alt: "Islamic Foundations hero page",
+    techStack: techStackIslam,
+    accentColor: "emerald-800",
+  },
+  {
+    id: "raeefPortfolio",
+    href: "/projects/portfolio",
+    title: "Portfolio",
+    description:
+      "A developer portfolio to showcase my projects and skills while also developing my NextJS and Typescript abilities.",
+    image: PortfolioImg,
+    alt: "Portfolio main page",
     techStack: techStackIslam,
     accentColor: "emerald-800",
   },

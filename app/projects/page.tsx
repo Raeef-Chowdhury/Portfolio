@@ -33,7 +33,8 @@ function Projects() {
           <AnimateStagger key={index} index={index}>
             <Link href={project.href}>
               <div
-                className={`group border-slate-700 hover:border-emerald-400/20 overflow-hidden hover:cursor-pointer hover:shadow-[0px_8px_30px_rgba(16,185,129,0.2)] hover:scale-[1.01] transition-all duration-300 border-[3px] max-w-[520px] rounded-xl flex flex-col bg-slate-900/40`}
+                className={`group border-slate-700 hover:border-emerald-400/20 overflow-hidden hover:cursor-pointer 
+    hover:shadow-[0px_8px_30px_rgba(16,185,129,0.1)] hover:scale-[1.01] transition-all duration-300 border-[3px] max-w-[520px] rounded-xl flex flex-col bg-slate-900/40`}
               >
                 <div className="relative w-full aspect-[15/9] overflow-hidden bg-slate-800">
                   <Image

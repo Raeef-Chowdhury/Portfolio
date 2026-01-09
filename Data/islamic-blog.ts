@@ -1,6 +1,7 @@
 import IslamicImg from "@/Images/Islamic-Foundations.png";
 import IslamicPerformance from "@/Images/Islamic-Performance.png";
-export const islamicFoundationsData = {
+import { ProjectData } from "@/Types/projectDetailed";
+export const islamicFoundationsData: ProjectData = {
   // Basic Info
   id: "islamic-foundations",
   title: "Islamic Foundations",
