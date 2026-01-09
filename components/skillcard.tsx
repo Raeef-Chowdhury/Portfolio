@@ -12,7 +12,6 @@ import {
   SiNpm,
   SiGooglechrome,
 } from "react-icons/si";
-import React from "react";
 import { Skill } from "@/Types/skill";
 import { useState } from "react";
 import { IconType } from "react-icons";
@@ -42,15 +41,15 @@ function SkillCard({ skill }: { skill: Skill }) {
         onMouseLeave={() => setHoveredSkill(null)}
       >
         <div
-          className={`absolute -inset-0.5 rounded-2xl bg-gradient-to-r ${
+          className={`absolute  left-[7.5%]  -inset-0.5 rounded-2xl bg-gradient-to-r ${
             skill.colorGradient
           } opacity-0 blur-lg transition-all duration-500 ${
             isHovered ? "opacity-20 " : ""
           }`}
         ></div>
 
-        <div className="max-w-[398px]  mx-auto relative h-full bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 lg:p-8 transition-all duration-500 hover:scale-[1.02] hover:border-slate-600 hover:shadow-2xl">
-          <div className="flex items-center justify-between">
+        <div className="max-w-[544px]   relative h-full bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 lg:p-8 transition-all duration-500 hover:scale-[1.02] hover:border-slate-600 hover:shadow-2xl">
+          <div className="flex items-center justify-between ">
             <div
               className={`text-5xl lg:text-6xl mb-4 lg:mb-6 text-black transform transition-all duration-500 ${
                 isHovered
@@ -81,7 +80,7 @@ function SkillCard({ skill }: { skill: Skill }) {
                       ? "text-orange-500"
                       : skill.name === "npm"
                       ? "text-red-800"
-                      : skill.name === "Chrome DevTools"
+                      : skill.name === "DevTools"
                       ? "text-emerald-700"
                       : "text-gray-400"
                   }`}

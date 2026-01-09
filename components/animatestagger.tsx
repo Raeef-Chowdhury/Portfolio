@@ -10,7 +10,6 @@ function AnimateStagger({
   return (
     <motion.div
       key={index}
-      className="mx-auto"
       initial={{ opacity: 0, x: -40 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.3 }}

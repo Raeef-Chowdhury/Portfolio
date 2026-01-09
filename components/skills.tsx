@@ -50,7 +50,7 @@ const techs = [
 ];
 export default function TechStack() {
   return (
-    <section className="w-full flex flex-col items-center  max-w-7xl mx-auto mt-32 px-6">
+    <section className="w-full flex flex-col items-center  max-w-7xl mx-auto mt-64 px-6">
       {/* Section Heading */}
       <Heading content="Stack" />
 
