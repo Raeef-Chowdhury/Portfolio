@@ -56,3 +56,27 @@ html {
     }
   }
 }
+
+@media (max-width: 1279px) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@media (max-width: 1023px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+@media (max-width: 639px) {
+  html {
+    font-size: 37.5%;
+  }
+}

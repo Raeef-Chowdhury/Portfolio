@@ -36,7 +36,11 @@ function Projects() {
                 className={`group border-slate-700 hover:border-emerald-400/20 overflow-hidden hover:cursor-pointer 
     hover:shadow-[0px_8px_30px_rgba(16,185,129,0.1)] hover:scale-[1.01] transition-all duration-300 border-[3px] max-w-[520px] rounded-xl flex flex-col bg-slate-900/40`}
               >
-                <div className="relative w-full aspect-[15/9] overflow-hidden bg-slate-800">
+                <div
+                  className={`relative w-full aspect-[15/9] overflow-hidden ${
+                    project.id === "raeefPortfolio" ? "contrast-110" : ""
+                  }  bg-slate-800`}
+                >
                   <Image
                     src={project.image}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

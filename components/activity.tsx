@@ -172,14 +172,14 @@ async function Activity() {
             <h3 className="text-[2.4rem] font-semibold text-text mb-[2.4rem]">
               Recent Work{" "}
             </h3>
-            <div className="grid grid-cols-3 gap-[4.2rem]">
+            <div className="grid grid-cols-3 gap-[4.2rem] max-[644px]:grid-cols-1 max-[644px]:justify-items-center">
               {commitDetails.map((commit: Commit, index: number) => (
                 <a
                   key={index}
                   href={commit.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group border max-w-[424px] border-slate-700/70 border-2 hover:border-emerald-600 bg-slate-900/40 hover:bg-slate-900/60 rounded-xl p-[2.4rem] transition-all duration-200"
+                  className="group border max-w-[424px] max-[644px]:w-[244px] mx-[3rem] border-slate-700/70 border-2 hover:border-emerald-600 bg-slate-900/40 hover:bg-slate-900/60 rounded-xl p-[2.4rem] transition-all duration-200"
                 >
                   <div className="flex flex-col gap-[2rem]">
                     <div className="flex flex-col items-center text-center gap-[1.2rem]">
@@ -201,7 +201,7 @@ async function Activity() {
                       </p>
                     </div>
 
-                    <div className="flex items-center justify-center gap-[2.4rem] text-[1.4rem] pt-[1.6rem] border-t border-slate-700/50">
+                    <div className=" flex items-center justify-center gap-[2.4rem] text-[1.4rem] pt-[1.6rem] border-t border-slate-700/50">
                       <span className="font-mono text-slate-400">
                         {commit.sha.substring(0, 7)}
                       </span>

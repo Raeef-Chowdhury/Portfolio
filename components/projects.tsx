@@ -25,24 +25,24 @@ function Projects() {
   return (
     <div
       id="projects"
-      className="max-w-[1440px] mx-auto mt-[24rem]  flex flex-col items-center "
+      className="max-w-[1440px] mx-auto mt-[24rem] min-w  flex flex-col items-center "
     >
       <div className="flex justify-center items-center w-full relative ">
         <Heading content="Featured Projects" />
         <Link href="/projects">
-          <button className="decoration-dotted absolute right-0 text-text text-[1.8rem] underline underline-offset-8 hover:text-primary transition-all hover:scale-105 hover:cursor-pointer">
+          <button className="decoration-dotted  max-[1544px]:hidden text-text text-[1.8rem] underline underline-offset-8 hover:text-primary transition-all hover:scale-105 hover:cursor-pointer px-[3rem]">
             View All →
           </button>
         </Link>
       </div>
 
-      <div className="Project__board mt-[6.4rem] flex justify-between gap-[6rem] items-center ">
+      <div className="Project__board mt-[6.4rem] max-[1388px]:flex-col  min-[1388px]:flex gap-[6rem] justify-between  items-center ">
         <Link href="/projects/star-vault ">
-          <div className="border-slate-700 hover:border-slate-500 overflow-hidden hover:cursor-pointer hover:shadow-[0px_8px_20px_rgba(255,255,255,0.1)] hover:scale-[1.02] transition-all duration-300 border-4 max-w-[840px] rounded-2xl flex flex-col gap-[2.4rem]">
-            <div className="w-full h-[388px] rounded bg-emerald-900/40 p-6 flex items-center justify-center overflow-hidden">
+          <div className="border-slate-700  hover:border-slate-500 max-[1388px]:mb-[6.4rem] overflow-hidden  hover:cursor-pointer hover:shadow-[0px_8px_20px_rgba(255,255,255,0.1)] hover:scale-[1.02] transition-all duration-300 border-4 mx-auto  max-[788px]:max-w-[388px]   max-w-[840px] rounded-2xl flex flex-col gap-[2.4rem]">
+            <div className="w-full  rounded bg-emerald-900/40 p-6 flex items-center justify-center overflow-hidden">
               <Image
                 src={StarVaultImg}
-                className="w-full h-full object-cover rounded-xl"
+                className="w-full h-full object-cover rounded-xl "
                 width={622}
                 height={388}
                 alt="Star Vault 3D galaxy journaling interface showing memories as stars in personalized galaxies"
@@ -75,8 +75,8 @@ function Projects() {
           </div>{" "}
         </Link>
         <Link href="/projects/islamic-foundations">
-          <div className="border-slate-700 hover:border-slate-500 overflow-hidden hover:cursor-pointer hover:shadow-[0px_8px_20px_rgba(255,255,255,0.1)] hover:scale-[1.02] transition-all duration-300 border-4 max-w-[840px] rounded-2xl flex flex-col gap-[2.4rem]">
-            <div className="w-full h-[388px] rounded bg-emerald-900/40 p-6 flex items-center justify-center overflow-hidden">
+          <div className="border-slate-700 hover:border-slate-500 overflow-hidden hover:cursor-pointer hover:shadow-[0px_8px_20px_rgba(255,255,255,0.1)] hover:scale-[1.02] transition-all duration-300 border-4 mx-auto  max-[788px]:max-w-[388px]   max-w-[840px max-w-[840px] rounded-2xl flex flex-col gap-[2.4rem]">
+            <div className="w-full  rounded bg-emerald-900/40 p-6 flex items-center justify-center overflow-hidden">
               <Image
                 src={IslamicImg}
                 className="w-full h-full object-cover rounded-xl"
@@ -111,6 +111,11 @@ function Projects() {
           </div>
         </Link>
       </div>
+      <Link href="/projects">
+        <button className=" mt-[6rem] decoration-dotted  min-[1544px]:hidden text-text text-[1.8rem] underline underline-offset-8 hover:text-primary transition-all hover:scale-105 hover:cursor-pointer">
+          View All →
+        </button>
+      </Link>
     </div>
   );
 }
