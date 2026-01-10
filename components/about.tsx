@@ -55,19 +55,19 @@ export default function AboutPreview() {
           </div>
         </div>
 
-        <div className="grid max-w-[1028px] mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        <div className="grid max-w-[1028px] mx-auto max-[1024px]:max-w-[644px] max-[644px]:max-w-[244px]  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
           {values.map((value, index) => {
             const IconComponent = value.icon;
             return (
               <div
                 key={index}
-                className="relative bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all duration-300 group cursor-pointer"
+                className="relative bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 border max-[644px]:text-center border-slate-700/50 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all duration-300 group cursor-pointer"
               >
                 {/* Hover glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 to-cyan-500/0 group-hover:from-emerald-500/10 group-hover:to-cyan-500/10 rounded-2xl transition-all duration-300" />
 
                 <div className="relative">
-                  <div className="mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <div className="mb-5 max-[644px]:justify-self-center lg:group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-16 h-16 text-emerald-400" />
                   </div>
                   <h3 className="text-white font-bold text-[1.7rem] mb-2">

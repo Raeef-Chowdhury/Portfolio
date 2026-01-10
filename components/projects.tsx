@@ -30,7 +30,7 @@ function Projects() {
       <div className="flex justify-center items-center w-full relative ">
         <Heading content="Featured Projects" />
         <Link href="/projects">
-          <button className="decoration-dotted  max-[1544px]:hidden text-text text-[1.8rem] underline underline-offset-8 hover:text-primary transition-all hover:scale-105 hover:cursor-pointer px-[3rem]">
+          <button className="decoration-dotted absolute right-0  max-[1544px]:hidden text-text text-[1.8rem] underline underline-offset-8 hover:text-primary transition-all hover:scale-105 hover:cursor-pointer px-[3rem]">
             View All →
           </button>
         </Link>

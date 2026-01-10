@@ -153,7 +153,7 @@ async function Activity() {
           className="max-w-[1440px] text-center mx-auto mt-[18rem] flex flex-col items-center"
         >
           <Heading content="Activity" />
-          <div className="mt-[6rem]">
+          <div className="mt-[6rem] max-[988px]:hidden">
             <GitHubCalendar
               username="raeef-chowdhury"
               blockSize={12}
@@ -172,7 +172,7 @@ async function Activity() {
             <h3 className="text-[2.4rem] font-semibold text-text mb-[2.4rem]">
               Recent Work{" "}
             </h3>
-            <div className="grid grid-cols-3 gap-[4.2rem] max-[644px]:grid-cols-1 max-[644px]:justify-items-center">
+            <div className="grid grid-cols-3 gap-[4.2rem] max-[844px]:grid-cols-1 max-[844px]:justify-items-center">
               {commitDetails.map((commit: Commit, index: number) => (
                 <a
                   key={index}
@@ -202,10 +202,6 @@ async function Activity() {
                     </div>
 
                     <div className=" flex items-center justify-center gap-[2.4rem] text-[1.4rem] pt-[1.6rem] border-t border-slate-700/50">
-                      <span className="font-mono text-slate-400">
-                        {commit.sha.substring(0, 7)}
-                      </span>
-
                       <div className="flex items-center gap-[0.8rem]">
                         <span className="text-green-400 font-medium">
                           +{commit.stats.additions}
