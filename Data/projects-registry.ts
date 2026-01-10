@@ -59,4 +59,31 @@ export const projectMetadata = {
       images: ["/portfolio/Images/Star-Vault.png"],
     },
   },
+  portfolio: {
+    title: "Portfolio | Projects",
+    description:
+      "My portfolio is a showcase of my projects and skills, built with NextJS, Typescript, and TailwindCSS.",
+    openGraph: {
+      title: "Portfolio | Raeef Chowdhury",
+      description:
+        "My portfolio is a showcase of my projects and skills, built with NextJS, Typescript, and TailwindCSS",
+      url: "https://raeef-portfolio.vercel.app/",
+      images: [
+        {
+          url: "/portfolio/Images/Portfolio.png",
+          width: 1200,
+          height: 630,
+          alt: "Portfolio main hero page ",
+        },
+      ],
+      type: "article" as const,
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: "Star Vault | Projects",
+      description:
+        "My portfolio is a showcase of my projects and skills, built with NextJS, Typescript, and TailwindCSS",
+      images: ["/portfolio/Images/Portfolio.png"],
+    },
+  },
 } as const;
