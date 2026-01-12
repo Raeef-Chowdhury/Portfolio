@@ -1,4 +1,4 @@
-import BlogHeading from "./blogheading";
+import BlogHeading from "@/components/BlogSections/blogheading";
 interface TechStackInfo {
   name: string;
   description: string;

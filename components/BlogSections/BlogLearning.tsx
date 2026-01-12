@@ -1,4 +1,4 @@
-import BlogHeading from "./blogheading";
+import BlogHeading from "@/components/BlogSections/blogheading";
 
 function BlogLearning({ text }: { text: string }) {
   return (

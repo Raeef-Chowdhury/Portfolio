@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import BlogHeading from "./blogheading";
+import BlogHeading from "@/components/BlogSections/blogheading";
 import Image from "next/image";
 
 interface Performance {

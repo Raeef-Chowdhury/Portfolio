@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 import dynamic from "next/dynamic";
-import AnimatedSection from "./aniamtedsection";
-const Time = dynamic(() => import("@/components/time"));
+import AnimatedSection from "@/components/animations/aniamtedsection";
+const Time = dynamic(() => import("@/components/ui/TimeDisplay"));
 
 function Hero() {
   return (

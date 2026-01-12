@@ -1,4 +1,4 @@
-import BlogHeading from "./blogheading";
+import BlogHeading from "@/components/BlogSections/blogheading";
 interface Feature {
   name: string;
   description: string;

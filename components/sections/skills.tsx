@@ -1,4 +1,4 @@
-import Heading from "@/components/heading";
+import Heading from "@/components/ui/heading";
 import Link from "next/link";
 import {
   SiReact,
@@ -50,7 +50,7 @@ const techs = [
 ];
 export default function TechStack() {
   return (
-    <section className="w-full flex flex-col items-center  max-w-7xl mx-auto mt-64 px-6">
+    <section className="w-full flex flex-col items-center  max-w-7xl mx-auto mt-[24rem] px-6">
       {/* Section Heading */}
       <Heading content="Stack" />
 
@@ -67,7 +67,7 @@ export default function TechStack() {
         />
 
         {/* Content - Left aligned */}
-        <div className="relative space-y-8">
+        <div className="relative space-y-8 max-[520px]:text-center">
           {/* Message */}
           <p className="text-text text-[2.8rem] font-semibold self-center justify-self-center mb-[3.2rem] leading-tight">
             I build{" "}
@@ -81,7 +81,7 @@ export default function TechStack() {
           </p>
 
           {/* Tech Pills */}
-          <div className="flex flex-wrap gap-12">
+          <div className="flex flex-wrap max-[520px]:grid max-[520px]:grid-cols-2 max-[520px]:justify-items-center max-[520px]:align-items-center gap-12">
             {techs.map((tech) => (
               <span
                 key={tech.name}

@@ -1,4 +1,4 @@
-import BlogHeading from "./blogheading";
+import BlogHeading from "@/components/BlogSections/blogheading";
 function BlogDesp({ text, text2 }: { text: string; text2: string }) {
   return (
     <div className="w-full flex flex-col items-center gap-[1.2rem] mt-[3rem]">

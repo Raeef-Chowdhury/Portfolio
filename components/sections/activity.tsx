@@ -1,4 +1,4 @@
-import Heading from "./heading";
+import Heading from "@/components/ui/heading";
 import { GitHubCalendar } from "react-github-calendar";
 interface GitHubEvent {
   id: string;
@@ -150,7 +150,7 @@ async function Activity() {
       <>
         <div
           id="activity"
-          className="max-w-[1440px] text-center mx-auto mt-[18rem] flex flex-col items-center"
+          className="max-w-[1440px] text-center mx-auto mt-[24rem] flex flex-col items-center"
         >
           <Heading content="Activity" />
           <div className="mt-[6rem] max-[988px]:hidden">

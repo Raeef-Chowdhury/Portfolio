@@ -1,6 +1,6 @@
-import SkillCard from "@/components/skillcard";
-import AnimateStagger from "@/components/animatestagger";
-import Heading from "@/components/heading";
+import SkillCard from "@/components/cards/skillcard";
+import AnimateStagger from "@/components/animations/animatestagger";
+import Heading from "@/components/ui/heading";
 import { skills } from "@/Data/skillspagedata";
 import { capabilities } from "@/Data/skillspagedata";
 import { colorMap } from "@/Data/skillspagedata";

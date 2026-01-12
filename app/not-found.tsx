@@ -1,5 +1,5 @@
 import Link from "next/link";
-import WindowBackBtn from "@/components/windowback";
+import WindowBackBtn from "@/components/ui/windowback";
 export default function NotFound() {
   return (
     <div className="min-h-screen flex mt-[6rem] justify p-4">

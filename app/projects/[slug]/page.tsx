@@ -1,47 +1,72 @@
 // app/projects/[slug]/page.jsx
 import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
-const AnimatedArticle = dynamic(() => import("@/components/animatedarticle"), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded"></div>,
-});
+const AnimatedArticle = dynamic(
+  () => import("@/components/animations/animatedarticle"),
+  {
+    loading: () => (
+      <div className="animate-pulse bg-gray-200 h-64 rounded"></div>
+    ),
+  }
+);
 
-const BackButton = dynamic(() => import("@/components/BackButton"), {
+const BackButton = dynamic(() => import("@/components/ui/BackButton"), {
   loading: () => (
     <div className="h-10 w-24 bg-gray-200 rounded animate-pulse"></div>
   ),
 });
 
-const BlogMain = dynamic(() => import("@/components/blogmain"), {
+const BlogMain = dynamic(() => import("@/components/BlogSections/blogmain"), {
   loading: () => <div className="animate-pulse bg-gray-200 h-96 rounded"></div>,
 });
 
-const BlogStats = dynamic(() => import("@/components/blogstats"), {
+const BlogStats = dynamic(() => import("@/components/BlogSections/blogstats"), {
   loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded"></div>,
 });
 
-const BlogDesp = dynamic(() => import("@/components/blogdesp"), {
+const BlogDesp = dynamic(() => import("@/components/BlogSections/blogdesp"), {
   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded"></div>,
 });
 
-const BlogTech = dynamic(() => import("@/components/blogtech"), {
+const BlogTech = dynamic(() => import("@/components/BlogSections/blogtech"), {
   loading: () => <div className="animate-pulse bg-gray-200 h-40 rounded"></div>,
 });
 
-const BlogFeatures = dynamic(() => import("@/components/blogfeatures"), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded"></div>,
-});
+const BlogFeatures = dynamic(
+  () => import("@/components/BlogSections/blogfeatures"),
+  {
+    loading: () => (
+      <div className="animate-pulse bg-gray-200 h-64 rounded"></div>
+    ),
+  }
+);
 
-const BlogChallenges = dynamic(() => import("@/components/blogchallenges"), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-56 rounded"></div>,
-});
+const BlogChallenges = dynamic(
+  () => import("@/components/BlogSections/blogchallenges"),
+  {
+    loading: () => (
+      <div className="animate-pulse bg-gray-200 h-56 rounded"></div>
+    ),
+  }
+);
 
-const BlogPerformance = dynamic(() => import("@/components/blogperformance"), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded"></div>,
-});
+const BlogPerformance = dynamic(
+  () => import("@/components/BlogSections/blogperformance"),
+  {
+    loading: () => (
+      <div className="animate-pulse bg-gray-200 h-48 rounded"></div>
+    ),
+  }
+);
 
-const BlogLearning = dynamic(() => import("@/components/BlogLearning"), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-52 rounded"></div>,
-});
+const BlogLearning = dynamic(
+  () => import("@/components/BlogSections/BlogLearning"),
+  {
+    loading: () => (
+      <div className="animate-pulse bg-gray-200 h-52 rounded"></div>
+    ),
+  }
+);
 
 import {
   projectsData,

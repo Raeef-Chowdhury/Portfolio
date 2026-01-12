@@ -1,11 +1,11 @@
 import dynamic from "next/dynamic";
 
-const Hero = dynamic(() => import("@/components/hero"));
-const Projects = dynamic(() => import("@/components/projects"));
-const Activity = dynamic(() => import("@/components/activity"));
-const Skills = dynamic(() => import("@/components/skills"));
-import About from "@/components/about";
-import Contact from "@/components/contact";
+const Hero = dynamic(() => import("@/components/sections/hero"));
+const Projects = dynamic(() => import("@/components/sections/projects"));
+const Activity = dynamic(() => import("@/components/sections/activity"));
+const Skills = dynamic(() => import("@/components/sections/skills"));
+import About from "@/components/sections/about";
+import Contact from "@/components/sections/contact";
 //TODO: Branch Jason Cameron's Home section
 //TODO: Techstack top of blogpost
 

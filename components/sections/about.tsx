@@ -1,4 +1,4 @@
-import Heading from "./heading";
+import Heading from "@/components/ui/heading";
 import { Zap, Layers, ShieldCheck, Target, LucideIcon } from "lucide-react";
 interface Value {
   icon: LucideIcon;
@@ -30,7 +30,7 @@ export const values: Value[] = [
 
 export default function AboutPreview() {
   return (
-    <section className="py-32 px-6 mt-[12rem]">
+    <section className="py-32 px-6 mt-[24rem]">
       <div className="mx-auto">
         <Heading content="About me" />
 

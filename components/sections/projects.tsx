@@ -5,7 +5,7 @@ import Image from "next/image";
 import StarVaultImg from "@/Images/Star-Vault.png";
 import IslamicImg from "@/Images/Islamic-Foundations.png";
 import { TechStack } from "@/Types/techstack";
-const Heading = dynamic(() => import("@/components/heading"));
+const Heading = dynamic(() => import("@/components/ui/heading"));
 const techStackStar: TechStack[] = [
   { skill: "JSON", color: "text-amber-300" },
   { skill: "Motion One", color: "text-blue-400" },
