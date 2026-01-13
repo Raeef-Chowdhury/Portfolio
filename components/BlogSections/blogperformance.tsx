@@ -31,7 +31,7 @@ function BlogPerformance({
   };
 
   return (
-    <div className="w-full flex flex-col items-center gap-[1.2rem] mt-[6rem]">
+    <div className="w-full  flex flex-col items-center gap-[1.2rem] mt-[6rem]">
       <BlogHeading content="Performance" />
 
       <div className="grid grid-cols-2 gap-[3rem] max-w-[772px] w-full mt-[2.4rem] mb-8 self-start">
@@ -46,7 +46,7 @@ function BlogPerformance({
               key={i}
               className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-[2.4rem] hover:bg-slate-800/40 transition-all duration-300"
             >
-              <div className="flex items-center gap-[2rem] mb-[1.6rem]">
+              <div className="flex max-[644px]:flex-col items-center gap-[2rem] mb-[1.6rem]">
                 <div className="relative w-[120px] h-[120px] flex-shrink-0">
                   <svg className="transform -rotate-90 w-full h-full">
                     <circle
@@ -86,7 +86,7 @@ function BlogPerformance({
                 </h4>
               </div>
 
-              <p className="text-text/70 text-[1.6rem] leading-relaxed">
+              <p className="text-text/70 max-[644px]:text-center text-[1.6rem] leading-relaxed">
                 {item.implementation}
               </p>
             </div>

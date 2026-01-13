@@ -9,7 +9,7 @@ function BlogStats({
   users: string;
 }) {
   return (
-    <div className="items-center flex w-full justify-between mt-[-1.8rem] border-b-2 border-slate-700 pb-[6rem] ">
+    <div className="items-center max-[612px]:mt-0 max-[612px]:flex-col flex w-full justify-between mt-[-1.8rem] border-b-2 border-slate-700 pb-[6rem] ">
       <div className="flex justify-center mt-6 items-center">
         <div className="inline-flex items-center gap-[1.2rem] px-[2.4rem] py-[1.2rem]  bg-slate-800/50 rounded-full border border-slate-700/50">
           <Calendar size={30} className="text-emerald-400" strokeWidth={2} />

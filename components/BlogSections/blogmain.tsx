@@ -16,7 +16,7 @@ function BlogMain({
 }) {
   return (
     <>
-      <div className="w-[722px] h-[390px]  rounded-4xl bg-emerald-900/40 p-6 flex items-center justify-center overflow-hidden">
+      <div className="min-[844px]:w-[722px] min-[844px]:h-[390px] max-[844px]:bg-none max-[844px]:border-4 max-[844px]:border-emerald-900/40 min-[844px]:bg-emerald-900/40  rounded-4xl  min-[844px]:p-6 flex items-center justify-center overflow-hidden">
         <Image
           src={src}
           className="   shadow-2xl object-cover rounded-2xl"
@@ -28,11 +28,11 @@ function BlogMain({
           quality={90}
         />
       </div>
-      <div className="flex justify-between items-center w-full  ">
-        <h1 className="self-start text-left text-[4.8rem] text-text capitalize">
+      <div className="flex max-[412px]:flex-col  max-[412px]:gap-[2.4rem] justify-between max-[512px]:my-[1.2rem] items-center w-full  ">
+        <h1 className="self-start text-left max-[412px]:self-center text-[4.8rem] text-text capitalize">
           {title}
         </h1>
-        <div className="flex items-center gap-[4.5rem] mr-[2rem]">
+        <div className="flex items-center gap-[4.5rem] mr-[2rem] max-[412px]:mr-0">
           <Link
             aria-label="github link"
             href={github}

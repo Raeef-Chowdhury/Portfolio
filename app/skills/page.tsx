@@ -21,7 +21,7 @@ export default function SkillsPage() {
         <h2 className="text-center text-[3.2rem] uppercase tracking-[0.4em] text-emerald-700 mb-24 font-medium">
           What I Can Do
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 max-[1028px]:grid-cols-2 max-[544px]:grid-cols-1 gap-8">
           {capabilities.map((capability, index) => {
             const Icon = capability.icon;
 
@@ -31,7 +31,7 @@ export default function SkillsPage() {
               <AnimateStagger key={index} index={index}>
                 <div className="group relative ">
                   <div
-                    className={`relative min-h-[280px] flex flex-col gap-[1.6rem] p-12 border-2 ${colors.border} transition-all duration-300 rounded-xl bg-slate-900/50 backdrop-blur-sm group-hover:scale-[1.02] shadow-2xs ${colors.shadow}`}
+                    className={`max-[544px]:items-center relative min-[1440px]:min-h-[280px] max-[1028px]:max-h-[200px] flex flex-col gap-[1.6rem] p-12 border-2 ${colors.border} transition-all duration-300 rounded-xl bg-slate-900/50 backdrop-blur-sm group-hover:scale-[1.02] shadow-2xs ${colors.shadow}`}
                   >
                     <Icon
                       className={`w-14 h-14  ${colors.icon} group-hover:scale-110 transition-transform duration-300`}
@@ -42,7 +42,7 @@ export default function SkillsPage() {
                     >
                       {capability.title}
                     </h3>
-                    <p className="text-[1.4rem] text-text  leading-relaxed group-hover:text-text/90 transition-colors">
+                    <p className="text-[1.4rem] max-[544px]:text-center text-text  leading-relaxed group-hover:text-text/90 transition-colors">
                       {capability.description}
                     </p>
                   </div>
@@ -70,7 +70,7 @@ export default function SkillsPage() {
                 </div>
               </div>
 
-              <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+              <div className="grid  grid-cols-2 max-[344px]:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
                 {skills
                   .filter((skill) => skill.category === category)
                   .map((skill) => (
@@ -95,7 +95,7 @@ export default function SkillsPage() {
           </h2>
         </div>
 
-        <div className="flex gap-[4.8rem] justify-center items-center">
+        <div className="flex gap-[4.8rem] max-[944px]:flex-col max-[944px] justify-center items-center">
           {improving.map((item, index) => (
             <AnimateStagger key={index} index={index}>
               <div className="bg-slate-900/40 border max-w-[388px] border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/10 backdrop-blur-sm group">
@@ -114,7 +114,7 @@ export default function SkillsPage() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-[1.4rem] text-text/50 leading-relaxed">
+                <p className="text-[1.4rem] line-clamp-3 text-text/50 leading-relaxed">
                   {item.detail}
                 </p>
               </div>

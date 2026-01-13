@@ -25,7 +25,7 @@ function BlogHeading({ content }: { content: string }) {
         ) : (
           ""
         )}
-        <h3 className="text-[4.8rem] text-text self-start tracking-[-0.1rem]">
+        <h3 className="text-[4rem] text-text self-start tracking-[-0.1rem]">
           {content}
         </h3>
       </div>

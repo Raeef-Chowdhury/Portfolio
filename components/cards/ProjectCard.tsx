@@ -7,7 +7,7 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={project.href}>
       <div
-        className={`group border-slate-700 hover:border-emerald-400/20 overflow-hidden hover:cursor-pointer 
+        className={`max-[588px]:max-w-[388px] group border-slate-700 hover:border-emerald-400/20 overflow-hidden hover:cursor-pointer 
     hover:shadow-[0px_8px_30px_rgba(16,185,129,0.1)] hover:scale-[1.01] transition-all duration-300 border-[3px] max-w-[520px] rounded-xl flex flex-col bg-slate-900/40`}
       >
         <div
@@ -28,7 +28,7 @@ function ProjectCard({ project }: { project: Project }) {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
         </div>
 
-        <div className="p-8 flex flex-col gap-[1.6rem]">
+        <div className="p-8 flex flex-col gap-[1.6rem] max-[588px]:items-center">
           <h3 className="text-emerald-400 font-bold text-4xl transition-colors duration-300 group-hover:text-emerald-300">
             {project.title}
           </h3>

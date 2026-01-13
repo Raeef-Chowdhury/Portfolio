@@ -5,7 +5,7 @@ interface Challenge {
 }
 function BlogChallenges({ challenge }: { challenge: Challenge[] }) {
   return (
-    <div className="w-full flex flex-col items-center gap-[1.2rem]  ">
+    <div className="w-full  flex flex-col items-center gap-[1.2rem]  ">
       <BlogHeading content="Challenges & Solutions" />
 
       <table className="max-w-[772px] text-[1.8rem] mt-[2.4rem] mb-8 self-start">

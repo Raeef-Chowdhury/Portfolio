@@ -9,8 +9,8 @@ const AnimatedArticle = dynamic(
     ),
   }
 );
-
-const BackButton = dynamic(() => import("@/components/ui/BackButton"), {
+import MobilePageBackBtn from "@/components/ui/MobilePageBtn";
+const BackButton = dynamic(() => import("@/components/ui/BackButtonPage"), {
   loading: () => (
     <div className="h-10 w-24 bg-gray-200 rounded animate-pulse"></div>
   ),
@@ -142,6 +142,7 @@ export default async function ProjectPage({ params }: PageProps) {
       />
 
       <BlogLearning text={projectData.lessonsLearned} />
+      <MobilePageBackBtn link="/projects" page="Projects" />
     </AnimatedArticle>
   );
 }

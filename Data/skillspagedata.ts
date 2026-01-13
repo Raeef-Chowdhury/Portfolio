@@ -179,7 +179,7 @@ export const capabilities: Capabilities[] = [
 
 export const improving: Improving[] = [
   {
-    text: "Animation with Framer Motion",
+    text: "Animation in Framer Motion",
     detail:
       "I’m refining my Framer Motion usage by creating reusable animation patterns, limiting motion to where it adds clarity, and focusing on performance-aware,",
     color: "text-purple-400",
