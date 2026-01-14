@@ -53,11 +53,11 @@ function Hero() {
             <span className="underline underline-offset-2 hover:bg-primary hover:text-background transition-colors hover:cursor-pointer mr-[0.6rem] decoration-primary">
               5+
             </span>{" "}
-            real world projects, and have{" "}
+            real world projects, and have over{" "}
             <span className="underline underline-offset-2 hover:bg-primary hover:text-background transition-colors hover:cursor-pointer mr-[0.6rem] decoration-primary">
               50+
             </span>{" "}
-            active users on one of them, Islamic Foundations.
+            people have used one of them, Islamic Foundations.
           </p>
           <div className="flex gap-[3.6rem] max-w-[644px] justify-self-center mt-[4.8rem]">
             <a

@@ -16,11 +16,11 @@ export const projectMetadata = {
   "islamic-foundations": {
     title: "Islamic Foundations | Projects",
     description:
-      "Islamic Foundations is a comprehensive Islamic education platform with 50+ active users, built with React and Motion One.",
+      "Islamic Foundations is a comprehensive Islamic education platform with 50+  users, built with React and Motion One.",
     openGraph: {
       title: "Islamic Foundations | Raeef Chowdhury",
       description:
-        "A website for deepening Islamic understanding with 50+ active users.",
+        "A website for deepening Islamic understanding with 50+  users.",
       url: "https://islamic-foundations.netlify.app/",
       images: [
         {

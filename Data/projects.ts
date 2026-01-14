@@ -1,55 +1,75 @@
 import { TechStack } from "@/Types/techstack";
 import { Project } from "@/Types/project";
+import { Star, Zap, Clock, Package, Users, Globe, Shield } from "lucide-react";
 
 import StarVaultImg from "@/Images/Star-Vault.png";
 import IslamicImg from "@/Images/Islamic-Foundations.png";
 import PortfolioImg from "@/Images/Portfolio.png";
 
 const techStackStar: TechStack[] = [
-  { skill: "JSON", color: "text-yellow-400" },
   { skill: "React Three Spring", color: "text-blue-400" },
   { skill: "React JS", color: "text-cyan-400" },
   { skill: "React Three Fiber", color: "text-emerald-400" },
 ];
 const techStackIslam: TechStack[] = [
-  { skill: "JSON", color: "text-yellow-400" },
   { skill: "Motion One", color: "text-amber-600" },
-  { skill: "Vite", color: "text-purple-400" },
   { skill: "React JS", color: "text-cyan-400" },
   { skill: "React-Router", color: "text-red-400" },
+];
+
+const techStackPortfolio: TechStack[] = [
+  { skill: "Motion One", color: "text-amber-600" },
+
+  { skill: "NextJS", color: "text-slate-200" },
+  { skill: "Typescript", color: "text-blue-400" },
 ];
 export const projects: Project[] = [
   {
     id: "star-vault",
     href: "/projects/star-vault",
     title: "Star Vault",
-    description:
-      "Star Vault is an immersive 3D journalling system. It allows users to store their memories in an interactive 3D space.",
+    description: "An immersive 3D interactive space",
     image: StarVaultImg,
     alt: "Star Vault 3D galaxy journaling interface",
     techStack: techStackStar,
     accentColor: "cyan-700",
+    cta: "Check this 3D space out",
+    stats: [
+      { icon: Zap, value: "95-99", label: "Lighthouse" },
+      { icon: Star, value: "12", label: "Stars" },
+      { icon: Clock, value: "2s", label: "Load" },
+    ],
   },
   {
     id: "islamic-foundations",
     href: "/projects/islamic-foundations",
     title: "Islamic Foundations",
-    description:
-      "A real world app meant for muslims to practice their daily obligations, currently used by over 50 people.",
+    description: "A real world islamic app used by over 50+ people",
     image: IslamicImg,
     alt: "Islamic Foundations hero page",
     techStack: techStackIslam,
     accentColor: "emerald-800",
+    cta: "Look at what's used by 50+ people",
+    stats: [
+      { icon: Users, value: "50+", label: "Active Users" },
+      { icon: Globe, value: "10+", label: "Countries" },
+      { icon: Zap, value: "95-99", label: "Lighthouse" },
+    ],
   },
   {
     id: "raeefPortfolio",
     href: "/projects/portfolio",
     title: "Portfolio",
-    description:
-      "A developer portfolio to showcase my projects and skills while also developing my NextJS and Typescript abilities.",
+    description: "My portfolio used to showcase my projects and skills",
     image: PortfolioImg,
     alt: "Portfolio main page",
-    techStack: techStackIslam,
+    techStack: techStackPortfolio,
     accentColor: "emerald-800",
+    cta: "Learn more about this project",
+    stats: [
+      { icon: Zap, value: "98", label: "Lighthouse" },
+      { icon: Package, value: "25+", label: "Reuseable Components" },
+      { icon: Shield, value: "100%", label: "Typesafety" },
+    ],
   },
 ];

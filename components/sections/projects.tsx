@@ -95,7 +95,7 @@ function Projects() {
               <p className="text-center text-text  max-w-[544px] leading-relaxed mb-[4.2rem] mx-auto text-[1.8rem] tracking-wide ">
                 Islamic Foundations is a website made in mind for all religious
                 people of Islam. It allows people to gain a deeper understanding
-                of the religion, with over 50+ active users.
+                of the religion, with over 50+ people who have used the site.
               </p>
               <ul className="flex gap-[1.2rem] justify-center pb-[2.4rem]">
                 {techStackIslam.map((item, index) => (
