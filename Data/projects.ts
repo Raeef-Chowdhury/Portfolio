@@ -35,7 +35,7 @@ export const projects: Project[] = [
     accentColor: "cyan-700",
     cta: "Check this 3D space out",
     stats: [
-      { icon: Zap, value: "95-99", label: "Lighthouse" },
+      { icon: Zap, value: "99+", label: "Lighthouse" },
       { icon: Star, value: "12", label: "Stars" },
       { icon: Clock, value: "2s", label: "Load" },
     ],
@@ -51,9 +51,9 @@ export const projects: Project[] = [
     accentColor: "emerald-800",
     cta: "Look at what's used by 50+ people",
     stats: [
-      { icon: Users, value: "50+", label: "Active Users" },
+      { icon: Users, value: "50+", label: " Users" },
       { icon: Globe, value: "10+", label: "Countries" },
-      { icon: Zap, value: "95-99", label: "Lighthouse" },
+      { icon: Zap, value: "95+", label: "Lighthouse" },
     ],
   },
   {
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     accentColor: "emerald-800",
     cta: "Learn more about this project",
     stats: [
-      { icon: Zap, value: "98", label: "Lighthouse" },
+      { icon: Zap, value: "90+", label: "Lighthouse" },
       { icon: Package, value: "25+", label: "Reuseable Components" },
       { icon: Shield, value: "100%", label: "Typesafety" },
     ],

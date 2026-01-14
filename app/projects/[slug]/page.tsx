@@ -9,12 +9,15 @@ const AnimatedArticle = dynamic(
     ),
   }
 );
-import MobilePageBackBtn from "@/components/ui/MobilePageBtn";
-const BackButton = dynamic(() => import("@/components/ui/BackButtonPage"), {
-  loading: () => (
-    <div className="h-10 w-24 bg-gray-200 rounded animate-pulse"></div>
-  ),
-});
+import MobilePageBackBtn from "@/components/ui/Btns/MobilePageBtn";
+const BackButton = dynamic(
+  () => import("@/components/ui/Btns/BackButtonPage"),
+  {
+    loading: () => (
+      <div className="h-10 w-24 bg-gray-200 rounded animate-pulse"></div>
+    ),
+  }
+);
 
 const BlogMain = dynamic(() => import("@/components/BlogSections/blogmain"), {
   loading: () => <div className="animate-pulse bg-gray-200 h-96 rounded"></div>,

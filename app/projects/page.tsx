@@ -3,8 +3,8 @@ import { Project } from "@/Types/project";
 import { projects } from "@/Data/projects";
 import AnimateStagger from "@/components/animations/animatestagger";
 import ProjectCard from "@/components/cards/ProjectCard";
-import BackHomeBtn from "@/components/ui/BackHome";
-import MobileBackHome from "@/components/ui/MobileBackHome";
+import BackHomeBtn from "@/components/ui/Btns/BackHome";
+import MobileBackHome from "@/components/ui/Btns/MobileBackHome";
 function Projects() {
   return (
     <div className="flex pb-[20rem] relative max-w-[1920px] mt-[6rem] mx-auto flex-col items-center">

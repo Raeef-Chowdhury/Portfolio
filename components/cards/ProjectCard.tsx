@@ -2,7 +2,6 @@ import Image from "next/image";
 import { TechStack } from "@/Types/techstack";
 import { Project } from "@/Types/project";
 import Link from "next/link";
-import { div } from "framer-motion/client";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
@@ -33,19 +32,17 @@ function ProjectCard({ project }: { project: Project }) {
           <h3 className="text-emerald-400 font-bold text-4xl transition-colors duration-300 group-hover:text-emerald-300">
             {project.title}
           </h3>
-          <div className="flex items-center my-[1.2rem] gap-12">
+          <div className="flex max-[1440px]:hidden items-center my-[1.2rem] gap-12">
             {" "}
-            {/* increased from gap-4 */}
             {project.stats.map((stat, i) => (
               <div key={i} className="flex  items-center gap-2">
                 {" "}
-                {/* increased from gap-1 */}
                 <stat.icon className="w-8 h-8 text-emerald-600 " />
                 <div className="flex items-center gap-2">
                   <span className="text-[1.6rem] font-bold text-white">
                     {stat.value}
                   </span>
-                  <span className="text-[1rem] text-slate-400">
+                  <span className=" text-[1rem] text-slate-400">
                     {stat.label}
                   </span>
                 </div>
