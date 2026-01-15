@@ -61,3 +61,15 @@ export default function AboutPage() {
     </div>
   );
 }
+
+export const metadata = {
+  title: "About Me - Raeef Chowdhury",
+  description:
+    "This is a little bit more about me, including what I focus on as a developer and what my priorities are in life.",
+  openGraph: {
+    title: "About Me | Raeef Chowdhury",
+    description: "Here is a little more about Raeef Chowdhury",
+    type: "website",
+    url: "https://raeef-chowdhury.vercel.app/about",
+  },
+};

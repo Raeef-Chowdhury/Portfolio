@@ -23,3 +23,22 @@ function Projects() {
 }
 
 export default Projects;
+export const metadata = {
+  title: "Projects | Raeef Chowdhury",
+  description:
+    "What I have already built, a detailed overview of my projects built with a full case study of each and a demo link.",
+  keywords: [
+    "frontend developer",
+    "Projects Portfolio",
+    "3D Journalling System",
+    "Real World Apps",
+    "Developer Portfolio",
+  ],
+  openGraph: {
+    title: "Skills | Raeef Chowdhury",
+    description:
+      "Projects of Raeef Chowdhury complete with a full case study of each",
+    type: "website",
+    url: "https://raeef-chowdhury.vercel.app/projects",
+  },
+};
