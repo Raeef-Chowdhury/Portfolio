@@ -19,7 +19,7 @@ export default function Footer() {
           </Link>
 
           <a
-            href="#mailto:raeef.chowdhury23@gmail.com"
+            href="#mailto:raeefchowdhury23@gmail.com"
             className="text-secondary hover:text-primary hover:scale-125  transition-all"
           >
             <svg

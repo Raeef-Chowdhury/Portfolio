@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ContactField } from "@/components/ui/ContactTexts";
 import { contactFields } from "@/Data/ContactField";
+import { Github, Mail } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -52,6 +53,25 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen flex flex-col px-5 py-8">
+      {" "}
+      <style>
+        {`
+        @keyframes animate-slide-in {
+          from {
+            transform: translateY(-10rem);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(10rem);
+            opacity: 1;
+          }
+        }
+        
+        .animate-slide-in {
+          animation: animate-slide-in 0.5s ease-out forwards;
+        }
+      `}
+      </style>
       <div className="w-full">
         <h1 className="text-[3.2rem] leading-[0.3rem] mt-[6rem] font-bold text-center text-text mb-8">
           Contact Me
@@ -102,6 +122,33 @@ export default function ContactPage() {
             </button>
           </div>
         </form>
+      </div>{" "}
+      <div className="mt-64 mb-18 pt-8">
+        <p className="text-center text-slate-400 text-[4.8rem] mb-24">
+          Prefer to reach out directly?
+        </p>
+        <div className="flex flex-wrap  justify-around max-w-[844px] mx-auto ">
+          <a
+            href="mailto:raeefchowdhury@23gmail.com"
+            className="flex flex-col group  items-center gap-2 text-emerald-400 transition duration-300 group"
+          >
+            <Mail className="w-18 h-18 group-hover:scale-125 group-hover:text-emerald-300 transition-transform" />
+            <span className="text-[2.4rem] group-hover:text-emerald-300 text-text">
+              raeefchowdhury@23gmail.com
+            </span>
+          </a>
+          <a
+            href="https://github.com/raeef-chowdhury"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col group  items-center gap-2 text-emerald-400 transition duration-300 group"
+          >
+            <Github className="w-18 h-18 group-hover:scale-125 group-hover:text-emerald-300 transition-transform" />
+            <span className="text-[2.4rem] group-hover:text-emerald-300 text-text">
+              Raeef-Chowdhury
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   );

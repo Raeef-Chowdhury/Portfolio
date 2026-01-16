@@ -107,7 +107,7 @@ function Hero() {
             </a>
             <a
               aria-label="email address link"
-              href="mailto:raeefchowdhury23@gmail?subject=Portfolio%20Inquiry&body=Hi%20Raeef,%20I%20came%20across%20your%20portfolio..."
+              href="mailto:raeefchowdhury23@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Raeef,%20I%20came%20across%20your%20portfolio..."
               target="_blank"
               rel="noopener noreferrer"
               className="relative inline-block group"

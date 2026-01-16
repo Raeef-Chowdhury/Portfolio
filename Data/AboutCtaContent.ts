@@ -17,7 +17,7 @@ export const AboutCtaContent: Action[] = [
     color: "hover:border-amber-400 hover:text-amber-500 ",
   },
   {
-    href: "mailto:raeef.chowdhury23@gmail.com",
+    href: "mailto:raeefchowdhury23@gmail.com",
     label: "Contact",
     icon: MailIcon,
     text: "Contact",
