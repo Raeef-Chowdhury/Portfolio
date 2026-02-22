@@ -1,14 +1,14 @@
-import AnimatedArticle from "@/components/animatedarticle";
-import BackButton from "@/components/BackButton";
-import BlogMain from "@/components/blogmain";
+import AnimatedArticle from "@/components/animations/animatedarticle";
+import BackButton from "@/components/ui/Btns/BackButtonPage";
+import BlogMain from "@/components/BlogSections/blogmain";
 import IslamicData from "@/Data/islamic-blog";
-import BlogStats from "@/components/blogstats";
-import BlogDesp from "@/components/blogdesp";
-import BlogTech from "@/components/blogtech";
-import BlogFeatures from "@/components/blogfeatures";
-import BlogChallenges from "@/components/blogchallenges";
-import BlogPerformance from "@/components/blogperformance";
-import BlogLearning from "@/components/BlogLearning";
+import BlogStats from "@/components/BlogSections/blogstats";
+import BlogDesp from "@/components/BlogSections/blogdesp";
+import BlogTech from "@/components/BlogSections/blogtech";
+import BlogFeatures from "@/components/BlogSections/blogfeatures";
+import BlogChallenges from "@/components/BlogSections/blogchallenges";
+import BlogPerformance from "@/components/BlogSections/blogperformance";
+import BlogLearning from "@/components/BlogSections/BlogLearning";
 function IslamicFoundations() {
   return (
     <>
