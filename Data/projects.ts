@@ -1,10 +1,20 @@
 import { TechStack } from "@/Types/techstack";
 import { Project } from "@/Types/project";
-import { Star, Zap, Clock, Package, Users, Globe, Shield } from "lucide-react";
+import {
+  Star,
+  Zap,
+  Clock,
+  Package,
+  Users,
+  Globe,
+  Shield,
+  FishingHook,
+} from "lucide-react";
 
 import StarVaultImg from "@/Images/Star-Vault.png";
 import IslamicImg from "@/Images/Islamic-Foundations.png";
 import PortfolioImg from "@/Images/Portfolio.png";
+import FluxisImg from "@/Images/Fluxis.png";
 
 const techStackStar: TechStack[] = [
   { skill: "React Three Spring", color: "text-blue-400" },
@@ -19,10 +29,17 @@ const techStackIslam: TechStack[] = [
 
 const techStackPortfolio: TechStack[] = [
   { skill: "Motion One", color: "text-amber-600" },
-
   { skill: "NextJS", color: "text-slate-200" },
   { skill: "Typescript", color: "text-blue-400" },
 ];
+
+const techStackFluxis: TechStack[] = [
+  { skill: "React JS", color: "text-cyan-400" },
+  { skill: "Typescript", color: "text-blue-400" },
+  { skill: "Tailwind CSS", color: "text-teal-400" },
+  { skill: "Custom Hooks", color: "text-orange-400" },
+];
+
 export const projects: Project[] = [
   {
     id: "star-vault",
@@ -70,6 +87,23 @@ export const projects: Project[] = [
       { icon: Zap, value: "90+", label: "Lighthouse" },
       { icon: Package, value: "25+", label: "Reuseable Components" },
       { icon: Shield, value: "100%", label: "Typesafety" },
+    ],
+  },
+  {
+    id: "fluxis",
+    href: "/projects/fluxis",
+    title: "FLUXIS",
+    description:
+      "A LifeOS-style dashboard to manage tasks, stats, and notifications",
+    image: FluxisImg,
+    alt: "FLUXIS productivity dashboard overview",
+    techStack: techStackFluxis,
+    accentColor: "violet-700",
+    cta: "Explore the dashboard",
+    stats: [
+      { icon: FishingHook, value: "5+", label: "Hooks" },
+      { icon: Package, value: "20+", label: "Components" },
+      { icon: Shield, value: "100%", label: "Typesafe" },
     ],
   },
 ];

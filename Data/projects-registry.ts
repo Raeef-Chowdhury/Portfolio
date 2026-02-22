@@ -2,12 +2,13 @@
 import IslamicData from "./islamic-blog";
 import StarData from "./star-blog";
 import PortfolioData from "./portfolio";
+import FluxisData from "./fluxis-blog";
 
 export const projectsData = {
   "islamic-foundations": IslamicData,
   "star-vault": StarData,
   portfolio: PortfolioData,
-  // Add more projects here as you create them
+  fluxis: FluxisData,
 } as const;
 
 export type ProjectSlug = keyof typeof projectsData;
@@ -84,6 +85,33 @@ export const projectMetadata = {
       description:
         "My portfolio is a showcase of my projects and skills, built with NextJS, Typescript, and TailwindCSS",
       images: ["/portfolio/Images/Portfolio.png"],
+    },
+  },
+  fluxis: {
+    title: "FLUXIS | Dashboard",
+    description:
+      "FLUXIS is a LifeOS-style productivity dashboard for centralizing tasks, stats, and notifications, built with React, TypeScript, and TailwindCSS.",
+    openGraph: {
+      title: "FLUXIS | Raeef Chowdhury",
+      description:
+        "FLUXIS is a LifeOS-style productivity dashboard for centralizing tasks, stats, and notifications, built with React, TypeScript, and TailwindCSS.",
+      url: "https://raeef-portfolio.vercel.app/projects/fluxis",
+      images: [
+        {
+          url: "/portfolio/Images/Fluxis.png",
+          width: 1200,
+          height: 630,
+          alt: "FLUXIS dashboard overview",
+        },
+      ],
+      type: "article" as const,
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: "FLUXIS | Dashboard",
+      description:
+        "FLUXIS is a LifeOS-style productivity dashboard for centralizing tasks, stats, and notifications, built with React, TypeScript, and TailwindCSS.",
+      images: ["/portfolio/Images/Fluxis.png"],
     },
   },
 } as const;
