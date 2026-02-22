@@ -24,7 +24,7 @@ function IslamicFoundations() {
         <BlogStats
           time={StarData.metadata.date}
           duration={StarData.metadata.duration}
-          users={StarData.metadata.highlight}
+          users={StarData.metadata.users}
         />
         <BlogDesp
           text={StarData.description[0]}
@@ -35,7 +35,7 @@ function IslamicFoundations() {
         <BlogChallenges challenge={StarData.challenges} />
         <BlogPerformance
           performance={StarData.performance}
-          performanceImg={StarData.images.perforamnceImg}
+          performanceImg={StarData.images.performance}
           performanceAlt={StarData.images.performanceAlt}
         />
         <BlogLearning text={StarData.lessonsLearned} />
